@@ -64,17 +64,31 @@ A [volume](../Common%20Definitions.md) is a file storage location inside a catal
 
 A [Git folder](../Common%20Definitions.md) is a Databricks workspace folder that is connected to GitHub. Create Git folders in a team or project workspace location rather than inside a personal folder when the work is expected to support a shared project.
 
-In Databricks, create or open Git folders from the workspace file browser. Use the Git folder option to connect the Databricks folder to the correct GitHub project, then confirm the folder opens with Git controls available at the top of the page.
+Within the workspace navigate to the `shared` folder and select create then select git folder.
+
+<img src="../images/git folder.PNG" alt="Create Git folder dialog" width="800">
+
+Paste the github repo url and select create git folder.
+
+<img src="../images/create git folder.PNG" alt="Create Git folder dialog" width="800">
 
 ### Branching In Databricks
 
-Use the branch selector in the Databricks Git folder before making changes. Create or switch to a working branch when the change is not ready for the shared version of the project.
+Now that the git folder has been created we can view the branch to the right of the repo name. Click on the branch if you would like to change branch or create a new one
+
+<img src="../images/select branch.PNG" alt="Create Git folder dialog" width="800">
+
+similary we can select the three elipses and select `Git...` to enter this same view
+
+<img src="../images/enter git for changes.PNG" alt="Create Git folder dialog" width="800">
 
 ### Committing In Databricks
 
-After editing notebooks, SQL files, or supporting project files in the Databricks Git folder, use the Git controls to review the changed files before committing. Commit only the files that belong to the current change.
+After editing notebooks, SQL files, or supporting project files in the Databricks Git folder, use either git method mentioned in the branching section to review the changed files before committing. Commit only the files that belong to the current change.
 
 Commit messages should describe the workflow or business change, not just the file that changed.
+
+<img src="../images/commit example.PNG" alt="Create Git folder dialog" width="800">
 
 ### Pushing From Databricks
 
