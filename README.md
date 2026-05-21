@@ -1,11 +1,11 @@
 ## Table of Contents
 ### Common Definitions (DT/GL)  
-  - What is catalog?
-  - Notebook?
-  - SQL query?
-  - Job?
-  - Power Automate?
-    - HTTP methods 
+- What is catalog?
+- Notebook?
+- SQL query?
+- Job?
+- Power Automate?
+  - HTTP methods 
 ### Databricks
 - Uploading Data (DT)
   - Reading Oracle Data 
@@ -18,7 +18,7 @@
   - Naming Conventions
   - Github Policies
   - Jobs Scheduling
-- Catalogue Organization (GL)
+- Organization (GL)
   - Schema vs Table vs Volume
 ### Tableau
 - Conventions
