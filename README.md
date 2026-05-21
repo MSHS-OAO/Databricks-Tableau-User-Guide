@@ -1,5 +1,5 @@
 ## Table of Contents
-## Common Definitions (DT/GL)  
+### Common Definitions (DT/GL)  
   - What is catalog?
   - Notebook?
   - SQL query?
