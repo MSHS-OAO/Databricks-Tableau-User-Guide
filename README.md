@@ -1,5 +1,5 @@
 ## Table of Contents
-## Common Definitions   
+## Common Definitions (DT/GL)  
   - What is catalog?
   - Notebook?
   - SQL query?
@@ -7,18 +7,18 @@
   - Power Automate?
     - HTTP methods 
 ### Databricks
-- Uploading Data
+- Uploading Data (DT)
   - Power Automate
     - Sharepoint
     - Outlook
     - One Drive Request Files
-- Connecting Tableau to Databricks
-- Conventions
+- Connecting Tableau to Databricks (GL)
+- Conventions (GL)
   - Knowing what Compute to use?
   - Naming Conventions
   - Github Policies
   - Jobs Scheduling
-- Catalogue Organization
+- Catalogue Organization (GL)
   - Schema vs Table vs Volume
 ### Tableau
 - Extract vs Live
