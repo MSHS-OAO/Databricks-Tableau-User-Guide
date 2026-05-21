@@ -30,6 +30,7 @@
 ### Admin Guide
 - Connecting Tableau to Databricks (GL)
 - Compute Creation (GL)
+  - Spark Secrets 
 - Extract vs Live (GL)
 - Oracle Cloud Wallet (DT)
   - Wallet Extraction
