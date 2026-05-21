@@ -8,6 +8,7 @@
     - HTTP methods 
 ### Databricks
 - Uploading Data (DT)
+  - Reading Oracle Data 
   - Power Automate
     - Sharepoint
     - Outlook
