@@ -10,6 +10,11 @@
 - **Table**: A queryable dataset stored inside a schema.
 - **Volume**: A governed file storage location inside a schema, often used for uploaded or staged files before they become tables.
 
+## GitHub Terms
+
+- **GitHub**: The code storage and collaboration tool our team uses for shared Databricks notebooks, SQL, and project files.
+- **Git Folder**: A Databricks workspace folder connected to a GitHub repository.
+
 ## Tableau Terms
 
 - **Tableau**: The reporting and dashboarding tool our team uses to connect to curated Databricks tables.
