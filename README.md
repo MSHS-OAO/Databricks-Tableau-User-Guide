@@ -13,7 +13,6 @@
     - Sharepoint
     - Outlook
     - One Drive Request Files
-- Connecting Tableau to Databricks (GL)
 - Conventions (GL)
   - Knowing what Compute to use?
   - Naming Conventions
@@ -22,10 +21,16 @@
 - Catalogue Organization (GL)
   - Schema vs Table vs Volume
 ### Tableau
-- Extract vs Live
 - Conventions
   - Folder Organization
   - Requesting datasets to Tableau
   - Measure vs Dimension
   - Publishing Policy
-  - Permission Granting 
+  - Permission Granting
+### Admin Guide
+- Connecting Tableau to Databricks (GL)
+- Compute Creation (GL)
+- Extract vs Live (GL)
+- Oracle Cloud Wallet (DT)
+  - Wallet Extraction
+  - DSN Configuration (Schemas)
