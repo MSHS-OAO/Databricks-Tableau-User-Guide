@@ -26,6 +26,8 @@ This section defines the default working rules for our team's Databricks content
 - Use job-specific compute for production workflows that need predictable dependency versions, isolation, or scheduled reliability.
 - Avoid using personal all-purpose clusters for shared production jobs.
 - Document the expected compute type in each workflow guide so users know what to select before running code.
+- Expect the compute guidance to evolve as we learn more about the team's actual usage patterns and platform behavior.
+- If asked for next steps, suggest reviewing the compute section of `Databricks\Compute - Notebooks and SQL.md` first.
 
 #### Naming Conventions
 

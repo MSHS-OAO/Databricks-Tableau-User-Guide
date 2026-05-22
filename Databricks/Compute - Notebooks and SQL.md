@@ -26,7 +26,7 @@ OAO_DEVELOPMENT SQL Warehouse
 
 ## SQL Editor
 
-There are two primary ways to start a SQL editor
+SQL Editors are used when you only need to write SQL. Best for data exploration and when you want to quickly export a file out of databricks as `csv` or `excel`. There are two primary ways to start a SQL editor
 1. The easiest method is to select the SQL Editor button underneath the SQL section of left hand navigation pane. This will open up a recent SQL editor if you have one or prompt you to create one. If you are prompted to create one, it will default to create in your personal drafts folder.
 
 <img src="../images/sql editor.PNG" alt="Create Git folder dialog"> 
@@ -48,9 +48,18 @@ Note that is convenient to select the catalog and schema of the data you will be
 
 ## Notebooks
 
-Attach compute to a notebook based on the work being done:
+Notebooks are used for multi-language coding or anything that does not use SQL.
 
-- Use [all-purpose compute](../Common%20Definitions.md) for exploratory notebook work.
-- Use serverless when it is sufficient for the notebook's workload.
-- Use [job compute](../Common%20Definitions.md) when the notebook is part of a scheduled production workflow that needs a predictable runtime environment.
+<img src="../images/create notebook.PNG" alt="Create Git folder dialog" width="1000">
 
+Similarly we must attach a compute to the notebook which we will most often use `Severless`. Here is an example of a simple notebook that uses an SQL chunk and a python chunk. Notice that the data from the SQL chunk is passed to the python chunk using `_sqldf`
+
+<img src="../images/simple notebook.PNG" alt="Create Git folder dialog" width="1000">
+
+## Sharing Code
+
+Anything you create in a personal workspace is only visible to you. If desired you will need to share it specifically with a teammember. Alternatively you can share it will all users if you want the entire team to have access. From the notebook or SQL editor, you can select the share buttom in the top right corner. Add individuals or `All workspace users` for the entire team. You also have the ability to modify their permissions level when sharing:
+1. **Can Manage**: user can do anything to the file. This is the highest level of access. Edit, run, view, change compute, delete, share. Be careful when selecting this option.
+2. **Can Edit**: user can edit the code within the file and run it. This is the most permissions you can grant a user without giving them full ownership of the file.
+3. **Can Run**: user can only run the code in the file. They can't change the code itself.
+4. **Can View**: user can only see the file but they can't run the code.
