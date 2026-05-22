@@ -16,10 +16,9 @@
 - Conventions (GL)
   - Knowing what Compute to use?
   - Naming Conventions
-  - Github Policies
+  - Architecture
+  - GitHub
   - Jobs Scheduling
-- Organization (GL)
-  - Schema vs Table vs Volume
 ### Tableau
 - Conventions
   - Folder Organization
