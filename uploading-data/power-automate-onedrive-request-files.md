@@ -1,6 +1,6 @@
 # Power Automate — OneDrive Request Files to Databricks
 
-The **Request Files** feature in OneDrive lets you create a link that anyone — even people outside your organization — can use to upload files to a specific OneDrive folder. Power Automate can watch that folder and automatically push new files to Databricks.
+The **Request Files** feature in OneDrive lets you create a link that anyone — even people outside your organization — can use to upload files to a specific OneDrive folder. [Power Automate](../Common%20Definitions.md#power-automate) can watch that folder and automatically push new files to Databricks.
 
 ## Architecture
 
@@ -18,15 +18,15 @@ Power Automate Flow
         ↓
 Databricks Job (notebook)
         ↓
-Delta Table in Unity Catalog
+Delta Table in Catalog
 ```
 
 ## Prerequisites
 
 - Microsoft 365 account with OneDrive for Business
-- Power Automate access
-- Databricks workspace with Unity Catalog enabled
-- Personal Access Token with `files` and `jobs` scopes
+- [Power Automate](../Common%20Definitions.md#power-automate) access
+- Databricks workspace with Catalog enabled
+- [Personal Access Token](../Common%20Definitions.md#personal-access-token-pat) with `files` and `jobs` scopes
 
 ## Step 1: Create the Request Files Link
 

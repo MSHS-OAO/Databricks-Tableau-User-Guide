@@ -78,7 +78,7 @@ Notebooks are saved automatically. To share:
 
 ## Where Notebooks Live
 
-Notebooks are stored in the Workspace, not in Unity Catalog. The path looks like:
+Notebooks are stored in the Workspace, not in Catalog. The path looks like:
 
 ```
 /Workspace/Users/user@mssm.edu/notebook_name
