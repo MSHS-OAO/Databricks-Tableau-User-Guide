@@ -1,6 +1,6 @@
 # What is a Catalog?
 
-A **catalog** is the top level of the Unity Catalog three-level namespace in Databricks:
+A **catalog** is the top level of the three-level namespace in Databricks:
 
 ```
 catalog . schema . table
@@ -44,7 +44,7 @@ SHOW SCHEMAS IN datahub_dev_bronze;
 
 ## Permissions
 
-Access to a catalog is governed by Unity Catalog privileges. Common grants:
+Access to a catalog is governed by Catalog permission grants:
 
 ```sql
 -- Allow a user to query all tables in a schema

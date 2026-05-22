@@ -1,6 +1,6 @@
 # Power Automate — Outlook to Databricks
 
-This pipeline watches an Outlook mailbox for emails with file attachments and automatically uploads those attachments to a Databricks Unity Catalog Volume, then triggers a job to ingest them.
+This pipeline watches an Outlook mailbox for emails with file attachments and automatically uploads those attachments to a Databricks Catalog [Volume](../Common%20Definitions.md#volume), then triggers a [Job](../Common%20Definitions.md#job) to ingest them.
 
 ## Architecture
 
@@ -16,15 +16,15 @@ Power Automate Flow
         ↓
 Databricks Job (notebook)
         ↓
-Delta Table in Unity Catalog
+Delta Table in Catalog
 ```
 
 ## Prerequisites
 
-- Microsoft 365 account with an Outlook mailbox and Power Automate access
-- Databricks workspace with Unity Catalog enabled
-- Personal Access Token with `files` and `jobs` scopes
-- Target Volume already created in Unity Catalog
+- Microsoft 365 account with an Outlook mailbox and [Power Automate](../Common%20Definitions.md#power-automate) access
+- Databricks workspace with Catalog enabled
+- [Personal Access Token](../Common%20Definitions.md#personal-access-token-pat) with `files` and `jobs` scopes
+- Target [Volume](../Common%20Definitions.md#volume) already created in the Catalog
 
 ## Power Automate Flow
 

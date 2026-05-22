@@ -1,6 +1,6 @@
 # What is a SQL Query?
 
-A **SQL query** is a statement that retrieves or modifies data in a table. In Databricks, SQL runs against Delta tables stored in Unity Catalog.
+A **SQL query** is a statement that retrieves or modifies data in a table. In Databricks, SQL runs against [Delta Tables](../Common%20Definitions.md#delta-table) stored in the [Catalog](../Common%20Definitions.md#catalog).
 
 ## Where to Write SQL
 
@@ -25,7 +25,7 @@ ORDER BY column1
 LIMIT 100;
 ```
 
-Example against a Unity Catalog table:
+Example against a Catalog [Table](../Common%20Definitions.md#table):
 
 ```sql
 SELECT
