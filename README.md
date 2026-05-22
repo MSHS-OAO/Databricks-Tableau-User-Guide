@@ -6,6 +6,7 @@
   - [Job?](common-definitions/job.md)
   - [Power Automate?](common-definitions/power-automate.md)
     - [HTTP methods](common-definitions/power-automate.md#http-methods)
+
 ### Databricks
 - Uploading Data (DT)
   - [Reading Oracle Data](uploading-data/reading-oracle-data.md)
