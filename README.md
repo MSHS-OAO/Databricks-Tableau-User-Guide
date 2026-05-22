@@ -4,8 +4,7 @@
   - Notebook?
   - SQL query?
   - Job?
-  - [Power Automate & HTTP Methods](common-definitions
-/power-automate.md)
+  - [Power Automate & HTTP Methods](common-definitions/power-automate.md)
 ### Databricks
 - Uploading Data (DT)
   - Reading Oracle Data 
