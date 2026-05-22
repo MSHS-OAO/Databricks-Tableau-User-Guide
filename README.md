@@ -4,8 +4,7 @@
   - Notebook?
   - SQL query?
   - Job?
-  - Power Automate?
-    - HTTP methods 
+  - [Power Automate & HTTP Methods]
 ### Databricks
 - Uploading Data (DT)
   - Reading Oracle Data 
