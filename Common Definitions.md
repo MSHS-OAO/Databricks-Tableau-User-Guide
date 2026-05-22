@@ -5,6 +5,10 @@
 - **Workspace**: The Databricks environment where users write notebooks, run jobs, manage compute, and access governed data.
 - **Notebook**: A Databricks document used to write and run code, SQL, notes, and analysis steps.
 - **Job**: A scheduled or manually triggered Databricks workflow that runs a task such as a notebook or query.
+- **Compute**: The Databricks environment that runs SQL, notebooks, and jobs. Teams choose shared, serverless, or job-specific compute based on the workload.
+- **All-purpose compute**: Interactive compute used for notebook development and ad hoc analysis.
+- **Job compute**: Compute used for scheduled jobs that need an isolated and predictable runtime.
+- **SQL warehouse**: Compute used for SQL queries, dashboards, and reporting in the SQL editor.
 - **Catalog**: The top-level Databricks container used to organize governed data.
 - **Schema**: A container inside a catalog that groups related tables and volumes.
 - **Table**: A queryable dataset stored inside a schema.
