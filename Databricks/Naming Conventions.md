@@ -1,10 +1,12 @@
 # Naming Conventions
 
+[Back to Table of Contents](../README.md#table-of-contents)
+
 Use names that describe the project and the data, not the person who created them.
 
 ## Schemas
 
-Name each [schema](../Common%20Definitions.md) with the project name. Keep the schema name short, lowercase, and easy to understand at a glance. Always use `snake_case`
+Name each [schema](../Common%20Definitions.md) with the project name. Keep the [schema](../Common%20Definitions.md) name short, lowercase, and easy to understand at a glance. Always use `snake_case`.
 
 Example:
 
@@ -29,5 +31,5 @@ model_output_files
 
 ## Team Rule
 
-- Schema names identify the project.
-- Schema, table and volume names use `snake_case`.
+- [Schema](../Common%20Definitions.md) names identify the project.
+- [Schema](../Common%20Definitions.md), [table](../Common%20Definitions.md), and [volume](../Common%20Definitions.md) names use `snake_case`.

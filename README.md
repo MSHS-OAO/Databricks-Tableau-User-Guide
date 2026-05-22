@@ -1,35 +1,33 @@
-## Table of Contents
-### Common Definitions (DT/GL)  
-- What is catalog?
-- Notebook?
-- SQL query?
-- Job?
-- Power Automate?
-  - HTTP methods 
-### Databricks
-- Uploading Data (DT)
-  - Reading Oracle Data 
-  - Power Automate
-    - Sharepoint
-    - Outlook
-    - One Drive Request Files
-- Conventions (GL)
-  - Knowing what Compute to use?
-  - Naming Conventions
-  - Architecture
-  - GitHub
-  - Jobs Scheduling
-### Tableau
-- Conventions
-  - Folder Organization
-  - Requesting datasets to Tableau
-  - Measure vs Dimension
-  - Publishing Policy
-  - Permission Granting
-### Admin Guide
+# Table of Contents
+
+[Back to Table of Contents](#table-of-contents)
+
+## Common Definitions
+
+- [Common Definitions](Common%20Definitions.md)
+
+## Databricks
+
+- [Architecture](Databricks/Architecture.md)
+- [Naming Conventions](Databricks/Naming%20Conventions.md)
+- [Compute - Notebooks and SQL](Databricks/Compute%20-%20Notebooks%20and%20SQL.md)
+- [Job Scheduling](Databricks/Job%20Scheduling.md)
+- [Uploading to Databricks](Uploading%20to%20Databricks)
+
+## Tableau
+
+- [Conventions](#)
+- Folder Organization
+- Requesting datasets to Tableau
+- Measure vs Dimension
+- Publishing Policy
+- Permission Granting
+
+## Admin Guide
+
 - Connecting Tableau to Databricks (GL)
 - Compute Creation (GL)
-  - Spark Secrets 
+  - Spark Secrets
 - Extract vs Live (GL)
 - Oracle Cloud Wallet (DT)
   - Wallet Extraction

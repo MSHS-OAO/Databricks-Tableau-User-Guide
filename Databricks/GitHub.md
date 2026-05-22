@@ -1,26 +1,28 @@
 # GitHub Conventions
 
-[Git folders](../Common%20Definitions.md) will be used as the standard convention for version control of all project work. Personal [workspace](../Common%20Definitions.md) folders are fine for early exploration. You can create whatever folders/files in your personal location in your personal [workspace](../Common%20Definitions.md). Production [notebooks](../Common%20Definitions.md), shared SQL, job code, and project documentation should live in a shared [GitHub](../Common%20Definitions.md)-backed project.
+[Back to Table of Contents](../README.md#table-of-contents)
+
+[Git folders](../Common%20Definitions.md) will be used as the standard convention for version control of all project work. Personal [workspace](../Common%20Definitions.md) folders are fine for early exploration. You can create whatever folders or files in your personal [workspace](../Common%20Definitions.md). Production [notebooks](../Common%20Definitions.md), shared SQL, job code, and project documentation should live in a shared Git-backed project.
 
 ## Creating Git Folders
 
-A [Git folder](../Common%20Definitions.md) is a Databricks [workspace](../Common%20Definitions.md) folder that is specifically connected to a [GitHub](../Common%20Definitions.md) repository. We will create our [git folders](../Common%20Definitions.md) in the shared location on the [workspace](../Common%20Definitions.md) so all users can access the folder and make changes to the repo. Note that a [Git folder](../Common%20Definitions.md) only needs to be created once.
+A [Git folder](../Common%20Definitions.md) is a Databricks [workspace](../Common%20Definitions.md) folder that is specifically connected to a Git repository. We will create our [Git folders](../Common%20Definitions.md) in the shared location on the [workspace](../Common%20Definitions.md) so all users can access the folder and make changes to the repo. Note that a [Git folder](../Common%20Definitions.md) only needs to be created once.
 
 Within the [workspace](../Common%20Definitions.md) navigate to the `shared` folder and select create then select [Git folder](../Common%20Definitions.md).
 
 <img src="../images/git folder.PNG" alt="Create Git folder dialog" width="1000">
 
-Paste the [GitHub](../Common%20Definitions.md) repo url and select create [Git folder](../Common%20Definitions.md).
+Paste the Git repo url and select create [Git folder](../Common%20Definitions.md).
 
 <img src="../images/create git folder.PNG" alt="Create Git folder dialog" width="1000">
 
 ## Branching In Databricks
 
-Now that the [Git folder](../Common%20Definitions.md) has been created we can view the branch to the right of the repo name. Click on the branch to enter the git UI where we can change branch or create a new branch.
+Now that the [Git folder](../Common%20Definitions.md) has been created, we can view the branch to the right of the repo name. Click on the branch to enter the git UI where we can change branch or create a new branch.
 
 <img src="../images/select branch.PNG" alt="Create Git folder dialog" width="1000">
 
-Similarly we can select the three elipses and select `Git...` to enter the same git UI.
+Similarly, we can select the three ellipses and select `Git...` to enter the same git UI.
 
 <img src="../images/enter git for changes.PNG" alt="Create Git folder dialog" width="1000">
 

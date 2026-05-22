@@ -1,5 +1,7 @@
 # Agents Guide
 
+[Back to Table of Contents](README.md#table-of-contents)
+
 This repository is a team-specific user guide for using Databricks and Tableau together. Prefer practical instructions that reflect our team's environment over generic product documentation.
 
 ## Writing Conventions

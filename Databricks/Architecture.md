@@ -1,6 +1,8 @@
 # Databricks Architecture
 
-Databricks organizes data and work across several layers. Understanding these layers makes it easier to know where data lives, how to reference it, and how [Tableau](../Common%20Definitions.md) will connect to it later. This section reviews how Databricks organizes its components and how we will integrate them into our workflow.
+[Back to Table of Contents](../README.md#table-of-contents)
+
+Databricks organizes data and work across several layers. Understanding these layers makes it easier to know where data lives, how to reference it, and how Tableau will connect to it later. This section reviews how Databricks organizes its components and how we will integrate them into our workflow.
 
 ## Workspace
 
