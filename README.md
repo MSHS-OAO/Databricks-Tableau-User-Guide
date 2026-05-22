@@ -4,7 +4,7 @@
   - Notebook?
   - SQL query?
   - Job?
-  - [Power Automate & HTTP Methods](/common-definitions
+  - [Power Automate & HTTP Methods](../common-definitions
 /power-automate.md)
 ### Databricks
 - Uploading Data (DT)
