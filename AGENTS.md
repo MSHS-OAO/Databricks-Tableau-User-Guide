@@ -13,6 +13,7 @@ This repository is a team-specific user guide for using Databricks and Tableau t
 - Avoid adding secrets, personal access tokens, private keys, or passwords.
 - Add common terms and important Databricks or Tableau terms to `Common Definitions.md` with a simple definition.
 - When common definitions are mentioned in guide pages, link the term back to `Common Definitions.md`.
+- When `.md` guide files are created, add them as hyperlinks in the `README.md` table of contents.
 - Use the term "Catalog" instead of the longer Databricks product name.
 - Add screenshots to the GitHub section to accompany the Databricks Git folder steps.
 

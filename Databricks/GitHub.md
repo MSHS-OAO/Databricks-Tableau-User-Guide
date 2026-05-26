@@ -10,27 +10,27 @@ A [Git folder](../Common%20Definitions.md) is a Databricks [workspace](../Common
 
 Within the [workspace](../Common%20Definitions.md) navigate to the `shared` folder and select create then select [Git folder](../Common%20Definitions.md).
 
-<img src="../images/git folder.PNG" alt="Create Git folder dialog" width="1000">
+<img src="../images/git folder.PNG" width="1000">
 
 Paste the Git repo url and select create [Git folder](../Common%20Definitions.md).
 
-<img src="../images/create git folder.PNG" alt="Create Git folder dialog" width="1000">
+<img src="../images/create git folder.PNG" width="1000">
 
 ## Branching In Databricks
 
 Now that the [Git folder](../Common%20Definitions.md) has been created, we can view the branch to the right of the repo name. Click on the branch to enter the git UI where we can change branch or create a new branch.
 
-<img src="../images/select branch.PNG" alt="Create Git folder dialog" width="1000">
+<img src="../images/select branch.PNG" width="1000">
 
 Similarly, we can select the three ellipses and select `Git...` to enter the same git UI.
 
-<img src="../images/enter git for changes.PNG" alt="Create Git folder dialog" width="1000">
+<img src="../images/enter git for changes.PNG" width="1000">
 
 ## Committing In Databricks
 
 After editing [notebooks](../Common%20Definitions.md), SQL files, or supporting project files in the Databricks [Git folder](../Common%20Definitions.md), enter the Git UI by using either method mentioned in the branching section. Review the changed files before committing. Commit only the files that belong to the current change.
 
-<img src="../images/commit example.PNG" alt="Create Git folder dialog" width="1000">
+<img src="../images/commit example.PNG" width="1000">
 
 ## Pushing From Databricks
 

@@ -23,10 +23,12 @@
 
 ## Admin Guide
 
-1. Connecting Tableau to Databricks (GL)
+1. Tableau
+   1. [Connecting to a Datasource](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md)
+   2. Extract vs Live Connection (GL)
+   3. Publishing Tableau Dataset (GL)
 2. Compute Creation (GL)
    1. Spark Secrets
-3. Extract vs Live (GL)
 4. Oracle Cloud Wallet (DT)
    1. Wallet Extraction
    2. DSN Configuration (Schemas)

@@ -18,3 +18,7 @@
 ## Git Terms
 
 - **Git Folder**: A Databricks workspace folder connected to a Git repository.
+
+## Tableau Terms
+
+- **Datasource**: A reusable Tableau connection layer that defines where data comes from, how Tableau should query it, and the fields, calculations, and metadata available to workbooks.
