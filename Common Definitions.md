@@ -22,3 +22,5 @@
 ## Tableau Terms
 
 - **Datasource**: A reusable Tableau connection layer that defines where data comes from, how Tableau should query it, and the fields, calculations, and metadata available to workbooks.
+- **Live connection**: A Tableau connection type that queries the source system directly when users open or interact with a workbook.
+- **Extract**: A Tableau-managed snapshot of data that is refreshed on a schedule and queried by Tableau instead of continuously querying the source system.

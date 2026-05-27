@@ -28,7 +28,7 @@ For our team, a Tableau datasource should point to a Databricks when possible. W
 
 <img src="../../images/ops analytics schema.PNG" width="500">
 
-6. Search for your desired `table` under the Table dropdown. Select the table you desire. Please refer to [Extract vs Live Connection](Extract%20vs%20Live%20Connection.md) to understand the difference between a live connection and an extract. Please refer to [Publishing Tableau Dataset](Publishing%20Tableau%20Dataset.md) for how to publish the table and make it available for the team.
+6. Search for your desired `table` under the Table dropdown. Select the table you desire. Please refer to [Extract vs. Live Connection](Extract%20vs.%20Live%20Connection.md) to understand the difference between a live connection and an extract. Please refer to [Publishing Tableau Dataset](Publishing%20Tableau%20Dataset.md) for how to publish the table and make it available for the team.
 
 <img src="../../images/ops analytics table.PNG" width="500">
 
@@ -54,6 +54,18 @@ For our team, a Tableau datasource should point to a Databricks when possible. W
 
 <img src="../../images/oao prod table.PNG" width="500">
 
-6. Please refer to [Extract vs Live Connection](Extract%20vs%20Live%20Connection.md) to understand the difference between a live connection and an extract. Please refer to [Publishing Tableau Dataset](Publishing%20Tableau%20Dataset.md) for how to publish the table and make it available for the team.
+6. Please refer to [Extract vs. Live Connection](Extract%20vs.%20Live%20Connection.md) to understand the difference between a live connection and an extract. Please refer to [Publishing Tableau Dataset](Publishing%20Tableau%20Dataset.md) for how to publish the table and make it available for the team.
 
-### Sharepoint/Onedrive
+### Connecting to Sharepoint/Onedrive
+
+1. Within Tableau, navigate to the project folder you would like to publish data under. Make sure the project subfolder has been created under the `Health System Operations (HSO)` team project. Select the `New` dropdown and select `Published Data Source`.
+
+<img src="../../images/new published data source.PNG" width="500">
+
+2. Navigate to the `Connectors` option and select `OndeDrive and SharePoint Online` and sign in with the default URL provided. This will send you to the Mount Sinai SSO.
+
+<img src="../../images/sharepoint connector.PNG" width="600">
+
+3. Navigate to the desired file
+
+4. Please refer to [Extract vs. Live Connection](Extract%20vs.%20Live%20Connection.md) to understand the difference between a live connection and an extract. Please refer to [Publishing Tableau Dataset](Publishing%20Tableau%20Dataset.md) for how to publish the table and make it available for the team.

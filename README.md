@@ -25,8 +25,11 @@
 
 1. Tableau
    1. [Connecting to a Datasource](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md)
-   2. Extract vs Live Connection (GL)
-   3. Publishing Tableau Dataset (GL)
+      1. [Connecting to Databricks](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md#connecting-to-databricks)
+      2. [Connecting to Oracle](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md#connecting-to-oracle)
+      3. [Connecting to Sharepoint/Onedrive](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md#sharepointonedrive)
+   2. [Extract vs. Live Connection](Admin%20Guide/Tableau/Extract%20vs.%20Live%20Connection.md)
+   3. [Publishing a Tableau Dataset](Admin%20Guide/Tableau/Publishing%20a%20Tableau%20Dataset.md)
 2. Compute Creation (GL)
    1. Spark Secrets
 4. Oracle Cloud Wallet (DT)
