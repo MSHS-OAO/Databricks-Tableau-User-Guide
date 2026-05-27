@@ -28,7 +28,11 @@ Similarly, we can select the three ellipses and select `Git...` to enter the sam
 
 ## Committing In Databricks
 
-After editing [notebooks](../Common%20Definitions.md), SQL files, or supporting project files in the Databricks [Git folder](../Common%20Definitions.md), enter the Git UI by using either method mentioned in the branching section. Review the changed files before committing. Commit only the files that belong to the current change.
+After editing [notebooks](../Common%20Definitions.md), SQL files, or supporting project files in the Databricks [Git folder](../Common%20Definitions.md), enter the Git UI by using either method mentioned in the branching section. The first time you commit or push to github, you will need to add your git credential. This links your github account to databricks and allows commits and pushes to flow form databricks to github. Navigate to the settings tab and select the dropdown under git credential and select Add Git credential. Change the nickname of the credential to `GitHub - <your name>`. Make sure the Link Git account option is selected and select Link. Now in the Git credential dropdown you should see your credential - select it and hit save.
+
+<img src="../images/git credential.PNG" width="700">
+
+Review the changed files before committing. Commit only the files that belong to the current change.
 
 <img src="../images/commit example.PNG" width="1000">
 
