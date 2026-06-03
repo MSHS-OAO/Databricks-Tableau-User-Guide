@@ -14,15 +14,6 @@ The [Oracle Cloud Wallet](../Common%20Definitions.md#oracle-cloud-wallet) is a Z
 | `keystore.jks` | Java KeyStore (used by JDBC) |
 | `truststore.jks` | Java TrustStore (used by JDBC) |
 
-## Downloading the Wallet from Oracle Cloud
-
-1. Log in to **Oracle Cloud Infrastructure** at [cloud.oracle.com](https://cloud.oracle.com)
-2. Navigate to **Oracle Database → Autonomous Database**
-3. Click on your database instance
-4. Click **Database connection** (top of the page)
-5. Under **Download client credentials (Wallet)**, click **Download wallet**
-6. Enter a **wallet password** — this protects `ewallet.p12`. Store it securely.
-7. Click **Download** — a `.zip` file downloads to your machine
 
 ## Extracting the Wallet
 

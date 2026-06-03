@@ -1,5 +1,7 @@
 # Agents Guide
 
+[Back to Table of Contents](README.md#table-of-contents)
+
 This repository is a team-specific user guide for using Databricks and Tableau together. Prefer practical instructions that reflect our team's environment over generic product documentation.
 
 ## Writing Conventions
@@ -11,6 +13,7 @@ This repository is a team-specific user guide for using Databricks and Tableau t
 - Avoid adding secrets, personal access tokens, private keys, or passwords.
 - Add common terms and important Databricks or Tableau terms to `Common Definitions.md` with a simple definition.
 - When common definitions are mentioned in guide pages, link the term back to `Common Definitions.md`.
+- When `.md` guide files are created, add them as hyperlinks in the `README.md` table of contents.
 - Use the term "Catalog" instead of the longer Databricks product name.
 - Add screenshots to the GitHub section to accompany the Databricks Git folder steps.
 
@@ -26,6 +29,8 @@ This section defines the default working rules for our team's Databricks content
 - Use job-specific compute for production workflows that need predictable dependency versions, isolation, or scheduled reliability.
 - Avoid using personal all-purpose clusters for shared production jobs.
 - Document the expected compute type in each workflow guide so users know what to select before running code.
+- Expect the compute guidance to evolve as we learn more about the team's actual usage patterns and platform behavior.
+- If asked for next steps, suggest reviewing the compute section of `Databricks\Compute - Notebooks and SQL.md` first.
 
 #### Naming Conventions
 
