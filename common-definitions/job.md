@@ -1,6 +1,6 @@
 # What is a Job?
 
-A **Databricks Job** schedules and runs tasks automatically — without anyone opening a notebook and clicking Run. Jobs are the production mechanism: once data pipelines are tested interactively, they get promoted into a job so they run on a schedule or on demand.
+A **Databricks Job** schedules and runs tasks automatically — without anyone opening a [Notebook](../Common%20Definitions.md#notebook) and clicking Run. Jobs are the production mechanism: once data pipelines are tested interactively, they get promoted into a job so they run on a schedule or on demand.
 
 ## Job vs Notebook
 
@@ -96,6 +96,6 @@ Configure email alerts on job failure:
 
 ## Compute Recommendation
 
-Use **Serverless** compute for jobs that run infrequently or need fast startup. Serverless clusters start in under 30 seconds and cost nothing when idle.
+Use [Serverless Compute](../Common%20Definitions.md#serverless-compute) for jobs that run infrequently or need fast startup. Serverless clusters start in under 30 seconds and cost nothing when idle.
 
-Use a **dedicated cluster** only if the job needs specific libraries or configurations not available on serverless.
+Use a **dedicated cluster** only if the job needs specific libraries or configurations not available on serverless. See [Knowing What Compute to Use](../databricks/conventions/compute.md) for the full decision guide.

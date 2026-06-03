@@ -37,7 +37,7 @@ SELECT COUNT(*) FROM datahub_dev_bronze.scorecards_raw_files.bsc_finance_raw;
 
 ## Widgets (Parameters)
 
-Widgets let a notebook accept input — either from the UI or from a Databricks Job. This is how Power Automate passes a filename to a notebook at runtime.
+Widgets let a notebook accept input — either from the UI or from a Databricks [Job](../Common%20Definitions.md#job). This is how [Power Automate](../Common%20Definitions.md#power-automate) passes a filename to a notebook at runtime.
 
 ```python
 # Declare a widget with a default value

@@ -157,12 +157,18 @@ dbutils.library.restartPython()
 | Field | Value |
 |---|---|
 | Job ID | `432705911179775` |
-| Job name | BSC Finance Ingest |
-| Task name | ingest |
+| Job name | `bsc_finance_ingest` |
+| Task name | `ingest` |
 | Task type | Notebook |
 | Source | Workspace |
-| Path | `/Workspace/Users/user@mssm.edu/bsc_finance_ingest` |
+| Path | `/Workspace/Shared/bsc_finance_ingest` |
 | Compute | Serverless |
+| **Owner** | _(assign a team member responsible for failures)_ |
+| **Schedule** | Event-driven — triggered by Power Automate on file upload |
+| **Source data** | `/Volumes/datahub_dev_bronze/scorecards_raw_files/finance/<file_name>` |
+| **Target table** | `datahub_dev_bronze.scorecards_raw_files.bsc_finance_raw` |
+| **Downstream Tableau** | _(list any Tableau workbooks or data sources that read from the target table)_ |
+| **Failure response** | Check Power Automate run history for the trigger step; verify file landed in the Volume; re-trigger manually from the job UI |
 
 Do not define `file_name` as a job-level parameter with a blank default — this overrides the notebook widget's default with an empty string and causes the job to fail with `IsADirectoryError` on manual runs.
 
