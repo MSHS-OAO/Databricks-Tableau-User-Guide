@@ -10,8 +10,7 @@ Team admins are responsible for creating shared compute, applying the right perm
 
 Confirm these details before creating a new SQL warehouse or all-purpose compute:
 
-1. Who owns the workflow or dashboard.
-2. Whether the compute supports testing, ad hoc analysis, scheduled production work, or Tableau reporting.
+1. Whether the compute supports testing, ad hoc analysis, scheduled production work, or Tableau reporting.
 3. Which users or groups need access.
 4. Whether the workload can use serverless compute.
 5. Whether the workflow needs specific libraries, init scripts, secrets, or configuration.
@@ -27,8 +26,7 @@ Use a [SQL warehouse](../Common%20Definitions.md#databricks-terms) for SQL edito
 
 1. In Databricks, open **SQL Warehouses** from the compute area.
 2. Select **Create SQL warehouse**.
-3. Choose a clear lowercase name with underscores.
-4. Select a serverless warehouse option when available.
+4. Select a serverless warehouse option when this is sufficient.
 5. Choose a size that matches the expected query demand.
 6. Configure auto stop so the warehouse shuts down when it is idle.
 7. Save the warehouse.
@@ -40,28 +38,11 @@ Use this setup for most team SQL warehouse requests:
 
 | Setting | Recommendation |
 | --- | --- |
-| Compute type | Serverless SQL warehouse when available |
-| Naming | Lowercase with underscores |
-| Access | Grant access to the team users or groups that need SQL or Tableau connectivity |
+| Cluster Size | X-Small or Small to start|
 | Auto stop | Enabled so idle warehouses shut down |
-| Production use | Allowed when serverless is sufficient for the workload |
-
-Example names:
-
-```text
-hso_reporting_sql
-hso_tableau_sql
-project_name_sql
-```
-
-### When to Use a SQL Warehouse
-
-Create or use a SQL warehouse when:
-
-1. Users are writing SQL in the SQL editor.
-2. Tableau needs to connect to Databricks.
-3. A dashboard or published datasource needs routine query access.
-4. The work does not require notebook-specific libraries or multi-language code.
+| Compute type | Serverless SQL warehouse when possible |
+| Scaling | Set max at expected # of concurrent uses |
+| Access | Grant access to the team users or groups that need SQL or Tableau connectivity |
 
 ## All-Purpose Compute
 
@@ -71,41 +52,21 @@ Use [all-purpose compute](../Common%20Definitions.md#databricks-terms) for inter
 
 1. In Databricks, open **Compute**.
 2. Select **Create compute**.
-3. Choose a clear lowercase name with underscores.
-4. Select a serverless option when available and appropriate.
-5. Choose a runtime and configuration that match the development workload.
+3. Set policy as shared computed.
+4. Set databricks runtime as most recent version with LTS (long term support)
+5. Choose a resource configuration appropriate for workload.
 6. Configure auto termination so the compute stops when idle.
-7. Add only the libraries or configuration needed for the workflow.
+7. Add any needed environmental variables or init scripts
 8. Save the compute.
-9. Grant access to the users or groups that need to attach notebooks.
-
-### Recommended Setup
-
-Use this setup for most team all-purpose compute requests:
-
-| Setting | Recommendation |
-| --- | --- |
-| Compute type | Serverless when available and sufficient |
-| Naming | Lowercase with underscores |
-| Access | Grant only to the users or groups doing notebook work |
-| Auto termination | Enabled so idle compute shuts down |
-| Production use | Avoid for shared production jobs unless there is a specific approved reason |
-
-Example names:
-
-```text
-hso_dev_all_purpose
-project_name_dev
-team_analysis_compute
-```
+9. Grant access to the users or groups that will use the compute.
 
 ### When to Use All-Purpose Compute
 
 Create or use all-purpose compute when:
 
-1. Users need to run Databricks notebooks interactively.
+1. Serverless compute is insufficient
 2. The work includes Python, SQL, or other notebook-supported languages.
-3. The team is exploring data before turning the work into a reusable workflow.
+3. The team is exploring data before turning the work into a reusable workflow (job).
 4. A workflow is still in development and does not yet require job-specific compute.
 
 For scheduled production notebooks, prefer job-specific compute when the workflow needs stable dependencies, isolation, or reliability.
@@ -119,19 +80,3 @@ Common access levels:
 1. **Can Manage**: User can change compute configuration and permissions.
 2. **Can Attach To**: User can attach notebooks or workloads to the compute.
 3. **Can Restart**: User can restart the compute when needed.
-
-Give admin-level access only to users responsible for maintaining the compute. Most users should only receive the access needed to run notebooks, SQL, or Tableau connections.
-
-## Documentation Expectations
-
-For each shared compute resource, document:
-
-1. Compute name.
-2. Compute type, such as SQL warehouse or all-purpose compute.
-3. Owner.
-4. Intended use.
-5. Users or groups with access.
-6. Whether the compute is approved for production use.
-7. Any special libraries, secrets, or configuration.
-
-If the compute supports a Tableau datasource or dashboard, include the SQL warehouse name in the related Tableau guide or publishing notes.
