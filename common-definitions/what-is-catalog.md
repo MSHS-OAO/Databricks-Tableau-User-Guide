@@ -6,7 +6,7 @@ A **catalog** is the top level of the three-level namespace in Databricks:
 catalog . schema . table
 ```
 
-Every table, view, volume, and function lives inside a schema, and every schema lives inside a catalog. When you write a SQL query or reference a table in Python, you always address it with all three levels:
+Every [Table](../Common%20Definitions.md#table), view, [Volume](../Common%20Definitions.md#volume), and function lives inside a [Schema](../Common%20Definitions.md#schema), and every Schema lives inside a catalog. When you write a SQL query or reference a table in Python, you always address it with all three levels:
 
 ```sql
 SELECT * FROM datahub_dev_bronze.scorecards_raw_files.bsc_finance_raw;
