@@ -66,6 +66,20 @@ The default table format in Databricks. Delta adds ACID transactions, schema enf
 
 ---
 
+## REST API
+
+A way for two systems to communicate over HTTP. Databricks exposes a REST API that lets external tools — including Power Automate — upload files, trigger jobs, and check run status by sending HTTP requests to a URL.
+
+Each request includes:
+- A **verb** (GET, POST, PUT, DELETE) that says what operation to perform
+- A **URL** that identifies the resource (e.g., a specific job or file path)
+- An **Authorization header** containing a [Personal Access Token](#personal-access-token-pat) to prove identity
+- Optionally, a **body** with data to send (for POST and PUT requests)
+
+See [HTTP Methods](common-definitions/power-automate.md#http-methods) for the full verb reference.
+
+---
+
 ## Personal Access Token (PAT)
 
 A credential string used to authenticate REST API calls to Databricks. Generated under **Settings → Developer → Access Tokens**. Scopes (`files`, `jobs`, `sql`) limit what the token can do. Never store a PAT in a notebook or commit it to git — use Databricks Secrets or Azure Key Vault.
