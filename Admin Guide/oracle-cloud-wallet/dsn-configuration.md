@@ -12,7 +12,7 @@ A **[DSN (Data Source Name)](../../Common%20Definitions.md#dsn-data-source-name)
 
 The Oracle Instant Client provides the libraries the ODBC driver needs.
 
-1. Go to ![Oracle's Instant Client download page](https://www.oracle.com/database/technologies/instant-client/downloads.html)
+1. Go to [Oracle's Instant Client download page](https://www.oracle.com/database/technologies/instant-client/downloads.html)
 2. Download the **Basic Package** and the **ODBC Package** for your OS (e.g., Windows x64)
 3. Extract both ZIPs to the same directory, e.g.:
    ```
