@@ -46,29 +46,6 @@ df = spark.createDataFrame(pdf)
 df.show(5)
 ```
 
-## Partition Strategy for Large Tables
-
-Reading a large Oracle table as a single JDBC partition is slow. Use `partitionColumn`, `lowerBound`, `upperBound`, and `numPartitions` to parallelize:
-
-```python
-df = (
-    spark.read
-    .format("jdbc")
-    .option("url", jdbc_url)
-    .option("dbtable", "SCHEMA_NAME.LARGE_TABLE")
-    .option("user", username)
-    .option("password", password)
-    .option("driver", "oracle.jdbc.OracleDriver")
-    .option("partitionColumn", "ROW_ID")
-    .option("lowerBound", "1")
-    .option("upperBound", "10000000")
-    .option("numPartitions", "10")
-    .load()
-)
-```
-
-Each partition runs as a separate SQL query with a `WHERE ROW_ID BETWEEN ...` clause.
-
 ## Common Errors
 
 | Error | Cause | Fix |
