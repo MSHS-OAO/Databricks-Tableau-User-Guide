@@ -71,58 +71,17 @@ concat(replace(triggerOutputs()?['body/attachments'][0]?['name'], concat('.', la
 | Field | Value |
 |---|---|
 | Method | `PUT` |
-| URI | `https://<workspace>.azuredatabricks.net/api/2.0/fs/files/Volumes/<catalog>/<schema>/<volume>/@{items('Apply_to_each')?['Name']}` |
+| URI | `https://<workspace>.azuredatabricks.net/api/2.0/fs/files/Volumes/<catalog>/<schema>/<volume>/outputs('Compose_filename')/?overwrite=true` |
 | Header: Authorization | `Bearer <PAT>` |
 | Header: Content-Type | `application/octet-stream` |
 | Body (expression) | `base64ToBinary(items('Apply_to_each')?['ContentBytes'])` |
 
-The `ContentBytes` field on an Outlook attachment is already base64-encoded. The expression decodes it to raw binary before sending to the Databricks Files API.
+The `ContentBytes` field on an Outlook attachment is already base64-encoded. The expression decodes it to raw binary before sending to the Databricks Files API. 
+
+`?overwrite-true` in URI tells Databricks to overwrite the if there's a file with same name
 
 Enter the expression via the **fx** button — not as plain text.
 
-### Action 4: HTTP POST — Trigger Databricks Job
-
-| Field | Value |
-|---|---|
-| Method | `POST` |
-| URI | `https://<workspace>.azuredatabricks.net/api/2.1/jobs/run-now` |
-| Header: Authorization | `Bearer <PAT>` |
-| Header: Content-Type | `application/json` |
-| Body | See below |
-
-```json
-{
-  "job_id": <job_id>,
-  "job_parameters": {
-    "file_name": "@{items('Apply_to_each')?['Name']}"
-  }
-}
-```
-
-## Databricks Notebook
-
-```python
-dbutils.widgets.text("file_name", "default.xlsx")
-file_name = dbutils.widgets.get("file_name")
-
-volume_path = f"/Volumes/<catalog>/<schema>/<volume>/{file_name}"
-target_table = "<catalog>.<schema>.<table>"
-
-import pandas as pd
-pdf = pd.read_excel(volume_path)
-df = spark.createDataFrame(pdf)
-
-df.write.mode("overwrite").option("overwriteSchema", "true").saveAsTable(target_table)
-print(f"Wrote {df.count()} rows to {target_table}")
-```
-
-## Filtering by Sender
-
-To only process emails from a trusted sender, add a **Condition** action after the trigger:
-
-- **Condition**: `From` is equal to `trusted-sender@example.com`
-- **If yes**: continue with upload and job trigger
-- **If no**: do nothing (leave the No branch empty)
 
 ## Handling Multiple File Types
 
