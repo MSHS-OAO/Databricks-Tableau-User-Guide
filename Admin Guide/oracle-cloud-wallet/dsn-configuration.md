@@ -1,6 +1,7 @@
 # DSN Configuration (Schemas)
 
 A **[DSN (Data Source Name)](../../Common%20Definitions.md#dsn-data-source-name)** is a named connection configuration that ODBC clients — including Tableau Desktop and Excel — use to connect to a database. For Oracle Autonomous Database, the DSN references the extracted [wallet](../../Common%20Definitions.md#oracle-cloud-wallet) and points to a specific schema (service name).
+Note: Only needed for local database connections (Windows)
 
 ## Prerequisites
 
