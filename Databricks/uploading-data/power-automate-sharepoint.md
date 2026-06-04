@@ -70,6 +70,9 @@ Avoid the deprecated `When a file is created in a folder` trigger.
 
 ### Action 2: Get file content using path
 
+![PA Sharepoint](../../images/PASharepoint2.PNG)
+
+
 | Field | Value |
 |---|---|
 | Site Address | (same as above) |
