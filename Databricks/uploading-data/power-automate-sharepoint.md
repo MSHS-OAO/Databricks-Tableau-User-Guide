@@ -25,7 +25,7 @@ Delta Table in Catalog
 - Microsoft 365 account with [Power Automate](../../Common%20Definitions.md#power-automate) access
 - Databricks workspace with Catalog enabled
 - Workspace admin must enable the `files` API scope for PATs
-- [Personal Access Token](../../Common%20Definitions.md#personal-access-token-pat) with both `files` scope
+- [Personal Access Token](../../Common%20Definitions.md#personal-access-token-pat) with `files` scope
 - Permissions on the target Volume (`WRITE VOLUME`) and Schema (`CREATE TABLE`)
 
 ## Setup
