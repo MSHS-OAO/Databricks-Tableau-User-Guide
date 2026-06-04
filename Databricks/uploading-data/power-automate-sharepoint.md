@@ -2,6 +2,8 @@
 
 End-to-end event-driven pipeline that uploads SharePoint files to a Databricks Catalog Volume.
 
+![PA Sharepoint](../../images/PASharepoint.PNG)
+
 ## Architecture
 
 ```
