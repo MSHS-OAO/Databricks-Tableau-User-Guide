@@ -2,7 +2,7 @@
 
 This pipeline watches an Outlook mailbox for emails with file attachments and automatically uploads those attachments to a Databricks Catalog [Volume](../../Common%20Definitions.md#volume), then triggers a [Job](../../Common%20Definitions.md#job) to ingest them.
 
-![Power Automate Workflow](../images/PAOutlookSource.PNG)
+![Power Automate Workflow](../../images/PAOutlookSource.PNG)
 
 ## Architecture
 ```
