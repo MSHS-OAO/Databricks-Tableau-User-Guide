@@ -43,7 +43,7 @@ Expressions transform values:
 - `base64ToBinary(body('Get_file_content_using_path')?['$content'])` — decodes base64-encoded file content back to raw binary
 
 Always enter expressions via the **fx** button in the action panel. Typing them as plain text sends the literal string instead of evaluating it.
-[FX](./images/fx.PNG)
+![FX](../images/fx.PNG)
 
 ## Testing a Flow
 
