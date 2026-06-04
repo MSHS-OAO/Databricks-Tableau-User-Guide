@@ -82,11 +82,12 @@ Avoid the deprecated `When a file is created in a folder` trigger.
 Setting **Infer Content Type** to **No** is critical for binary files like Excel. When set to `Yes`, Power Automate tries to interpret the file and corrupts the binary content, resulting in a 0-byte file landing in the Volume.
 
 ### Action 3: HTTP PUT — Upload to Volume
+![PA Sharepoint](../../images/PASharepoint3.PNG)
 
 | Field | Value |
 |---|---|
 | Method | `PUT` |
-| URI | `https://adb-7405606624435497.17.azuredatabricks.net/api/2.0/fs/files/Volumes/datahub_dev_bronze/scorecards_raw_files/finance/@{triggerOutputs()?['body/{FilenameWithExtension}']}` |
+| URI | `https://<workspace>.azuredatabricks.net/api/2.0/fs/files/Volumes/datahub_dev_bronze/scorecards_raw_files/finance/triggerBody()?['{FilenameWithExtension}']` |
 | Header: Authorization | `Bearer <PAT>` |
 | Header: Content-Type | `application/octet-stream` |
 | Body (expression) | `base64ToBinary(body('Get_file_content_using_path')?['$content'])` |
