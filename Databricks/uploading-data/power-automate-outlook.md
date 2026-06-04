@@ -83,15 +83,6 @@ The `ContentBytes` field on an Outlook attachment is already base64-encoded. The
 Enter the expression via the **fx** button — not as plain text.
 
 
-## Handling Multiple File Types
-
-Use a **Switch** action on `items('Apply_to_each')?['Name']` extension to route different file types to different notebooks:
-
-```
-Switch on: @{last(split(items('Apply_to_each')?['Name'], '.'))}
-Case '.xlsx': trigger job_id for Excel ingestion
-Case '.csv':  trigger job_id for CSV ingestion
-```
 
 ## Common Errors
 
