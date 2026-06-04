@@ -112,3 +112,7 @@ __Output :__
 | `ORA-01017: invalid username/password` | Wrong credentials | Verify secrets, check for trailing whitespace |
 | `SSL handshake failed` | Wallet path wrong or wallet not extracted | Confirm wallet files are at the path referenced in JDBC URL |
 | `ClassNotFoundException: oracle.jdbc.OracleDriver` | JDBC jar not on cluster | Attach Oracle JDBC JAR to the cluster library |
+
+## Notes:
+- [`db_config`](db_config.py) is python function specific to our team
+- It facilitates connections to both `OAO_PRODUCTION` and `OAO_DEVELOPMENT`
