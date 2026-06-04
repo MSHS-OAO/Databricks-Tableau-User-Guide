@@ -30,6 +30,9 @@ Delta Table in Catalog
 
 ### Action 1: When a new email arrives (V3)
 
+
+![Power Automate Workflow](../../images/PAOutlook1.PNG)
+
 | Field | Value |
 |---|---|
 | Folder | `Inbox` (or a specific sub-folder) |
