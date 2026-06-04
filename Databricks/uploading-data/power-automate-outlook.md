@@ -82,7 +82,8 @@ The `ContentBytes` field on an Outlook attachment is already base64-encoded. The
 
 Enter the expression via the **fx** button — not as plain text.
 
-
+### Action 4: Send E-mail
+![Power Automate Workflow](../../images/SendEmail.PNG)
 
 ## Common Errors
 
