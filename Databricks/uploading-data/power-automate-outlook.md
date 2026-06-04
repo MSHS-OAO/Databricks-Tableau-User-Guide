@@ -11,7 +11,7 @@ Outlook Inbox
 Power Automate Flow
         ↓ (3 actions)
    1. When a new email arrives (V3) — Outlook trigger
-   2. Get attachment (loop) — fetches attachment bytes
+   2. compose file name
    3. HTTP PUT → Databricks Files API — uploads to Volume
         ↓
 Databricks Job (notebook)
