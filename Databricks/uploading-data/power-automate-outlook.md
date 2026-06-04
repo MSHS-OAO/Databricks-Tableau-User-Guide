@@ -22,7 +22,7 @@ Delta Table in Catalog
 
 - Microsoft 365 account with an Outlook mailbox and [Power Automate](../../Common%20Definitions.md#power-automate) access
 - Databricks workspace with Catalog enabled
-- [Personal Access Token](../../Common%20Definitions.md#personal-access-token-pat) with `files` and `jobs` scopes
+- [Personal Access Token](../../Common%20Definitions.md#personal-access-token-pat) with `files` scope
 - Target [Volume](../../Common%20Definitions.md#volume) already created in the Catalog
 
 ## Power Automate Flow
