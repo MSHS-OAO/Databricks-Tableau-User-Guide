@@ -1,13 +1,13 @@
 # Reading Oracle Data in Databricks
 
-This guide covers how to connect a Databricks [Notebook](../Common%20Definitions.md#notebook) to an Oracle database and read data into a Spark DataFrame.
+This guide covers how to connect a Databricks [Notebook](../../Common%20Definitions.md#notebook) to an Oracle database and read data into a Spark DataFrame.
 
-**Compute**: Use [Serverless Compute](../Common%20Definitions.md#serverless-compute) for exploratory reads. For scheduled ingestion jobs, attach a job-specific cluster with the Oracle JDBC JAR configured as a cluster library so dependency versions are fixed.
+**Compute**: Use [Serverless Compute](../../Common%20Definitions.md#serverless-compute) for exploratory reads. For scheduled ingestion jobs, attach a job-specific cluster with the Oracle JDBC JAR configured as a cluster library so dependency versions are fixed.
 
 ## Prerequisites
 
-- [Oracle Cloud Wallet](../Common%20Definitions.md#oracle-cloud-wallet) (`.zip`) extracted and placed on the Databricks cluster (see [Wallet Extraction](../Admin%20Guide/oracle-cloud-wallet/wallet-extraction.md))
-- [DSN](../Common%20Definitions.md#dsn-data-source-name) configured via ODBC Data Source Administrator (see [DSN Configuration](../Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md))
+- [Oracle Cloud Wallet](../../Common%20Definitions.md#oracle-cloud-wallet) (`.zip`) extracted and placed on the Databricks cluster (see [Wallet Extraction](../../Admin%20Guide/oracle-cloud-wallet/wallet-extraction.md))
+- [DSN](../../Common%20Definitions.md#dsn-data-source-name) configured via ODBC Data Source Administrator (see [DSN Configuration](../../Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md))
 - `cx_Oracle` or `oracledb` Python library available on the cluster
 
 ## Option 1: JDBC Connection (Recommended for Spark)

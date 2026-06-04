@@ -1,6 +1,6 @@
 # Power Automate — SharePoint to Databricks
 
-End-to-end event-driven pipeline that uploads SharePoint files to a Databricks Catalog [Volume](../Common%20Definitions.md#volume) and triggers a [Job](../Common%20Definitions.md#job) to ingest them into a [Delta Table](../Common%20Definitions.md#delta-table).
+End-to-end event-driven pipeline that uploads SharePoint files to a Databricks Catalog [Volume](../../Common%20Definitions.md#volume) and triggers a [Job](../../Common%20Definitions.md#job) to ingest them into a [Delta Table](../../Common%20Definitions.md#delta-table).
 
 ## Architecture
 
@@ -21,11 +21,11 @@ Delta Table in Catalog
 
 ## Prerequisites
 
-- Microsoft 365 account with [Power Automate](../Common%20Definitions.md#power-automate) access
+- Microsoft 365 account with [Power Automate](../../Common%20Definitions.md#power-automate) access
 - Databricks workspace with Catalog enabled
 - Workspace admin must enable the `files` API scope for PATs
-- [Personal Access Token](../Common%20Definitions.md#personal-access-token-pat) with both `files` and `jobs` scopes
-- Permissions on the target [Volume](../Common%20Definitions.md#volume) (`WRITE VOLUME`) and [Schema](../Common%20Definitions.md#schema) (`CREATE TABLE`)
+- [Personal Access Token](../../Common%20Definitions.md#personal-access-token-pat) with both `files` and `jobs` scopes
+- Permissions on the target [Volume](../../Common%20Definitions.md#volume) (`WRITE VOLUME`) and [Schema](../../Common%20Definitions.md#schema) (`CREATE TABLE`)
 
 ## Setup
 

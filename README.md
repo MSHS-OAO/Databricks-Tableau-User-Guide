@@ -9,11 +9,11 @@
 
 ### Databricks
 - Uploading Data (DT)
-  - [Reading Oracle Data](uploading-data/reading-oracle-data.md)
+  - [Reading Oracle Data](Databricks/uploading-data/reading-oracle-data.md)
   - Power Automate
-    - [Sharepoint](uploading-data/power-automate-sharepoint.md)
-    - [Outlook](uploading-data/power-automate-outlook.md)
-    - [One Drive Request Files](uploading-data/power-automate-onedrive-request-files.md)
+    - [Sharepoint](Databricks/uploading-data/power-automate-sharepoint.md)
+    - [Outlook](Databricks/uploading-data/power-automate-outlook.md)
+    - [One Drive Request Files](Databricks/uploading-data/power-automate-onedrive-request-files.md)
 - Conventions (GL)
   - [Knowing what Compute to use?](Databricks/conventions/compute.md)
   - [Naming Conventions](Databricks/conventions/naming-conventions.md)
