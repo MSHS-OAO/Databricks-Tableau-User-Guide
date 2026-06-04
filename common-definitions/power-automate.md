@@ -49,7 +49,7 @@ Always enter expressions via the **fx** button in the action panel. Typing them 
 
 Use **Test** (top right of the flow editor) to run the flow manually and inspect each step's inputs and outputs. If an action fails, expand it to see the raw HTTP response — the `message` field usually explains exactly what went wrong.
 
-![FX](../images/testPA.PNG)
+![FX](../images/testpa.PNG)
 
 ## Common Errors
 
