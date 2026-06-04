@@ -56,7 +56,7 @@ WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="C:\oracle
 SSL_SERVER_DN_MATCH=yes
 ```
 
-Replace the path with the actual extraction directory. On Windows, use forward slashes or escape backslashes.
+Replace the path with the actual extraction directory in Databricks (`/Volumes/datahub_dev_bronze/config/oracle_wallet`). On Windows, use forward slashes or escape backslashes.
 
 ## Rotating the Wallet
 
