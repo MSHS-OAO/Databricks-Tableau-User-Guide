@@ -3,7 +3,7 @@
 
 **Power Automate** (formerly Microsoft Flow) is a Microsoft cloud automation platform included in Microsoft 365. It lets you build workflows — called **flows** — that connect services together without writing a backend server.
 
-In the context of this guide, Power Automate acts as the bridge between Microsoft data sources (SharePoint, Outlook, OneDrive) and Databricks. It watches for an event, fetches file content, and calls the Databricks REST API to upload files to a [Volume](../Common%20Definitions.md#volume) and trigger a [Job](../Common%20Definitions.md#job).
+In the context of this guide, Power Automate acts as the bridge between Microsoft data sources (SharePoint, Outlook, OneDrive) and Databricks. It watches for an event, fetches file content, and calls the Databricks REST API to upload files to a Volume and trigger a Job.
 
 ## Flow Structure
 
