@@ -14,7 +14,6 @@ Power Automate Flow
    1. When a file is created — OneDrive trigger
    2. Get file content — fetches file bytes
    3. HTTP PUT → Databricks Files API — uploads to Volume
-   4. HTTP POST → Databricks Jobs API — triggers ingest job
         ↓
 Databricks Job (notebook)
         ↓
