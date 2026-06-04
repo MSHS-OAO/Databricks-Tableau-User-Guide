@@ -12,7 +12,6 @@ Power Automate Flow
    1. When a new email arrives (V3) — Outlook trigger
    2. Get attachment (loop) — fetches attachment bytes
    3. HTTP PUT → Databricks Files API — uploads to Volume
-   4. HTTP POST → Databricks Jobs API — triggers ingest job
         ↓
 Databricks Job (notebook)
         ↓
