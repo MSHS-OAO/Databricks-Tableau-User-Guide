@@ -106,11 +106,5 @@ Same issue but for the `jobs` scope. Regenerate PAT with both scopes.
 ### File lands in Volume but shows 0.00 B
 The HTTP Body is sending the JSON envelope instead of the decoded file content. Verify the Body expression is `base64ToBinary(body('Get_file_content_using_path')?['$content'])` entered via **fx** (not plain text).
 
-### `IsADirectoryError: Is a directory: '/Volumes/.../finance/'`
-The `file_name` parameter is empty. Either remove the blank job-level parameter or supply a default value.
-
-### `DELTA_FAILED_TO_MERGE_FIELDS`
-Schema mismatch with an existing Delta table. Add `.option("overwriteSchema", "true")` to the write call.
-
 ### `NotFound` on Get file content step
 Using `Get file content` (by ID) with the `When a file is created (properties only)` trigger fails because the trigger outputs a list item ID, not a file ID. Use `Get file content using path` and pass the `Full path` dynamic value instead.
