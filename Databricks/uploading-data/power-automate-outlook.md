@@ -4,6 +4,8 @@ This pipeline watches an Outlook mailbox for emails with file attachments and au
 
 ## Architecture
 
+![PowerAutomateWorflow](../images/PA-OutlookSource.PNG)
+
 ```
 Outlook Inbox
         ↓ (email with attachment arrives)
