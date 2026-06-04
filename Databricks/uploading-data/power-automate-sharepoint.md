@@ -26,7 +26,7 @@ Delta Table in Catalog
 - Databricks workspace with Catalog enabled
 - Workspace admin must enable the `files` API scope for PATs
 - [Personal Access Token](../../Common%20Definitions.md#personal-access-token-pat) with both `files` scope
-- Permissions on the target [Volume](../../Common%20Definitions.md#volume) (`WRITE VOLUME`) and [Schema](../../Common%20Definitions.md#schema) (`CREATE TABLE`)
+- Permissions on the target Volume (`WRITE VOLUME`) and Schema (`CREATE TABLE`)
 
 ## Setup
 
