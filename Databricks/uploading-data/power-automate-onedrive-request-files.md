@@ -25,7 +25,7 @@ Delta Table in Catalog
 - Microsoft 365 account with OneDrive for Business
 - [Power Automate](../../Common%20Definitions.md#power-automate) access
 - Databricks workspace with Catalog enabled
-- [Personal Access Token](../../Common%20Definitions.md#personal-access-token-pat) with `files` and `jobs` scopes
+- [Personal Access Token](../../Common%20Definitions.md#personal-access-token-pat) with `files` scope
 
 ## Step 1: Create the Request Files Link
 
