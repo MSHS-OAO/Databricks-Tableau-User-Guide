@@ -40,20 +40,12 @@ Delta Table in Catalog
 /Volumes/datahub_dev_bronze/scorecards_raw_files/finance/
 ```
 
-Grant write access if not already granted:
-
-```sql
-GRANT WRITE VOLUME ON VOLUME datahub_dev_bronze.scorecards_raw_files.finance
-TO `user@mssm.edu`;
-```
-
 ### 3. Personal Access Token
 
 Databricks workspace → **Settings → Developer → Access Tokens → Generate new token**
 
 Required scopes:
 - `files` — to upload to Volumes via REST API
-- `jobs` — to trigger job runs via REST API
 
 Without these scopes, requests return `403 Forbidden: required scopes: <scope>`.
 
