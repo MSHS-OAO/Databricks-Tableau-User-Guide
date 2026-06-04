@@ -36,5 +36,5 @@
   - Spark Secrets 
 - Extract vs Live (GL)
 - Oracle Cloud Wallet (DT)
-  - [Wallet Extraction](oracle-cloud-wallet/wallet-extraction.md)
-  - [DSN Configuration (Schemas)](oracle-cloud-wallet/dsn-configuration.md)
+  - [Wallet Extraction](Admin%20Guide/oracle-cloud-wallet/wallet-extraction.md)
+  - [DSN Configuration (Schemas)](Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md)

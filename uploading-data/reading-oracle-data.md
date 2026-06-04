@@ -6,8 +6,8 @@ This guide covers how to connect a Databricks [Notebook](../Common%20Definitions
 
 ## Prerequisites
 
-- [Oracle Cloud Wallet](../Common%20Definitions.md#oracle-cloud-wallet) (`.zip`) extracted and placed on the Databricks cluster (see [Wallet Extraction](../oracle-cloud-wallet/wallet-extraction.md))
-- [DSN](../Common%20Definitions.md#dsn-data-source-name) configured via ODBC Data Source Administrator (see [DSN Configuration](../oracle-cloud-wallet/dsn-configuration.md))
+- [Oracle Cloud Wallet](../Common%20Definitions.md#oracle-cloud-wallet) (`.zip`) extracted and placed on the Databricks cluster (see [Wallet Extraction](../Admin%20Guide/oracle-cloud-wallet/wallet-extraction.md))
+- [DSN](../Common%20Definitions.md#dsn-data-source-name) configured via ODBC Data Source Administrator (see [DSN Configuration](../Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md))
 - `cx_Oracle` or `oracledb` Python library available on the cluster
 
 ## Option 1: JDBC Connection (Recommended for Spark)

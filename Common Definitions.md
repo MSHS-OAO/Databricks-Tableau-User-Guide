@@ -94,13 +94,13 @@ A key-value credential stored securely in a Databricks Secret Scope. Accessed in
 
 ## Oracle Cloud Wallet
 
-A ZIP archive containing SSL certificates and connection descriptors needed to establish a secure connection from Databricks or ODBC clients to Oracle Autonomous Database. See [Wallet Extraction](oracle-cloud-wallet/wallet-extraction.md).
+A ZIP archive containing SSL certificates and connection descriptors needed to establish a secure connection from Databricks or ODBC clients to Oracle Autonomous Database. See [Wallet Extraction](Admin%20Guide/oracle-cloud-wallet/wallet-extraction.md).
 
 ---
 
 ## DSN (Data Source Name)
 
-A named connection profile in the Windows ODBC Data Source Administrator. Tableau Desktop and other ODBC clients use a DSN to connect to a database without specifying the full connection string each time. See [DSN Configuration](oracle-cloud-wallet/dsn-configuration.md).
+A named connection profile in the Windows ODBC Data Source Administrator. Tableau Desktop and other ODBC clients use a DSN to connect to a database without specifying the full connection string each time. See [DSN Configuration](Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md).
 
 ---
 
