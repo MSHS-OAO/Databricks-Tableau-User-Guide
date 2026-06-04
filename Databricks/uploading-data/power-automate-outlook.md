@@ -36,7 +36,7 @@ Delta Table in Catalog
 
 | Field | Value |
 |---|---|
-| Folder | `Inbox` (or a specific sub-folder) |
+| From | Sender E-mails |
 | Include Attachments | **Yes** |
 | Only with Attachments | **Yes** |
 
