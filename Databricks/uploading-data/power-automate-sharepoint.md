@@ -32,9 +32,11 @@ Delta Table in Catalog
 
 ### 1. SharePoint
 
+![PA Sharepoint](../../images/PASharepoint0.PNG)
+
 - Site: Balanced Scorecards Automation
 - Library: Documents
-- Watched folder: `/Shared Documents/DataFeeds`
+- Watched folder: `/Documents/DataFeeds`
 
 ### 2. Databricks Volume
 
@@ -62,7 +64,7 @@ Without these scopes, requests return `403 Forbidden: required scopes: <scope>`.
 |---|---|
 | Site Address | Balanced Scorecards Automation |
 | Library Name | Documents |
-| Folder | `/Shared Documents/DataFeeds` |
+| Folder | `/Documents/DataFeeds` |
 
 Avoid the deprecated `When a file is created in a folder` trigger.
 
