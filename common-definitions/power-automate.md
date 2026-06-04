@@ -19,23 +19,6 @@ Every flow has three parts:
 3. Search for your trigger (e.g., "SharePoint — When a file is created")
 4. Add actions using the **+** button between steps
 
-## Calling the Databricks REST API
-
-Power Automate calls Databricks using the built-in **HTTP** action.
-
-### Required headers
-
-| Header | Value |
-|---|---|
-| `Authorization` | `Bearer <Personal Access Token>` |
-| `Content-Type` | `application/json` (for POST) or `application/octet-stream` (for binary PUT) |
-
-### Generating a Personal Access Token (PAT)
-
-Databricks workspace → **Settings → Developer → Access Tokens → Generate new token**
-
-Store the token value immediately — it is only shown once. Paste it into the HTTP action's Authorization header.
-
 ## HTTP Methods
 
 HTTP verbs tell the server what operation to perform. Power Automate HTTP actions require you to pick the correct verb:
@@ -48,39 +31,6 @@ HTTP verbs tell the server what operation to perform. Power Automate HTTP action
 | `PATCH` | Partially update an existing resource | Update a job's schedule |
 | `DELETE` | Remove a resource | Delete a file from a Volume |
 
-### GET example — check job run status
-
-```
-Method: GET
-URI: https://<workspace>.azuredatabricks.net/api/2.1/jobs/runs/get?run_id=12345
-Authorization: Bearer <PAT>
-```
-
-### POST example — trigger a job
-
-```
-Method: POST
-URI: https://<workspace>.azuredatabricks.net/api/2.1/jobs/run-now
-Authorization: Bearer <PAT>
-Content-Type: application/json
-Body:
-{
-  "job_id": 432705911179775,
-  "job_parameters": {
-    "file_name": "report.xlsx"
-  }
-}
-```
-
-### PUT example — upload a file to a Volume
-
-```
-Method: PUT
-URI: https://<workspace>.azuredatabricks.net/api/2.0/fs/files/Volumes/catalog/schema/volume/filename.xlsx
-Authorization: Bearer <PAT>
-Content-Type: application/octet-stream
-Body: <binary file content>
-```
 
 ## Dynamic Content and Expressions
 
@@ -93,10 +43,13 @@ Expressions transform values:
 - `base64ToBinary(body('Get_file_content_using_path')?['$content'])` — decodes base64-encoded file content back to raw binary
 
 Always enter expressions via the **fx** button in the action panel. Typing them as plain text sends the literal string instead of evaluating it.
+![FX](../images/fx.PNG)
 
 ## Testing a Flow
 
 Use **Test** (top right of the flow editor) to run the flow manually and inspect each step's inputs and outputs. If an action fails, expand it to see the raw HTTP response — the `message` field usually explains exactly what went wrong.
+
+![FX](../images/testpa.PNG)
 
 ## Common Errors
 
