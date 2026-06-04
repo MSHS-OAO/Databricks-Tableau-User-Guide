@@ -5,7 +5,7 @@ A **[DSN (Data Source Name)](../../Common%20Definitions.md#dsn-data-source-name)
 
 __Note:__
 - Only needed for local database connections (Windows)
-- You may not have access to `C:\` Drive, Raise ticket on service now portal or call DTP Help desk and ask for `*Developer Permisions on local laptop*`
+- You may not have access to `C:\` Drive, Raise ticket on service now portal or call DTP Help desk and ask for *`Developer Permisions on local laptop`*
 
 ## Prerequisites
 
