@@ -1,11 +1,11 @@
 ## Table of Contents
 ### [Common Definitions](Common%20Definitions.md) (DT/GL)  
-  - [What is catalog?](common-definitions/what-is-catalog.md)
-  - [Notebook?](common-definitions/notebook.md)
-  - [SQL query?](common-definitions/sql-query.md)
-  - [Job?](common-definitions/job.md)
-  - [Power Automate?](common-definitions/power-automate.md)
-    - [HTTP methods](common-definitions/power-automate.md#http-methods)
+  - [What is catalog?](Common%20Definitions/what-is-catalog.md)
+  - [Notebook?](Common%20Definitions/notebook.md)
+  - [SQL query?](Common%20Definitions/sql-query.md)
+  - [Job?](Common%20Definitions/job.md)
+  - [Power Automate?](Common%20Definitions/power-automate.md)
+    - [HTTP methods](Common%20Definitions/power-automate.md#http-methods)
 
 ### Databricks
 - Uploading Data (DT)

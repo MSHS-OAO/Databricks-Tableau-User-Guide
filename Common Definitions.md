@@ -6,7 +6,7 @@ Quick-reference definitions for terms used throughout this guide. Click any term
 
 ## Catalog
 
-The top level of the three-level namespace `catalog.schema.table`. Catalogs separate environments or major governance boundaries. See [What is a Catalog?](common-definitions/what-is-catalog.md).
+The top level of the three-level namespace `catalog.schema.table`. Catalogs separate environments or major governance boundaries. See [What is a Catalog?](Common%20Definitions/what-is-catalog.md).
 
 Example: `datahub_dev_bronze`
 
@@ -38,25 +38,25 @@ Example: `/Volumes/datahub_dev_bronze/scorecards_raw_files/finance/`
 
 ## Notebook
 
-An interactive document in the Databricks Workspace where you write and run code in cells. Supports Python, SQL, Scala, and R. See [Notebook](common-definitions/notebook.md).
+An interactive document in the Databricks Workspace where you write and run code in cells. Supports Python, SQL, Scala, and R. See [Notebook](Common%20Definitions/notebook.md).
 
 ---
 
 ## SQL Query
 
-A statement that reads or transforms data in a Delta table. In Databricks, SQL runs in the SQL Editor or inside a `%sql` notebook cell against Catalog tables. See [SQL Query](common-definitions/sql-query.md).
+A statement that reads or transforms data in a Delta table. In Databricks, SQL runs in the SQL Editor or inside a `%sql` notebook cell against Catalog tables. See [SQL Query](Common%20Definitions/sql-query.md).
 
 ---
 
 ## Job
 
-A Databricks Workflow that schedules and runs a notebook or script automatically — triggered by a schedule, an API call, or another system such as Power Automate. See [Job](common-definitions/job.md).
+A Databricks Workflow that schedules and runs a notebook or script automatically — triggered by a schedule, an API call, or another system such as Power Automate. See [Job](Common%20Definitions/job.md).
 
 ---
 
 ## Power Automate
 
-A Microsoft 365 cloud automation platform that connects services without custom server code. Used to watch SharePoint, Outlook, and OneDrive for new files and forward them to Databricks via REST API. See [Power Automate](common-definitions/power-automate.md).
+A Microsoft 365 cloud automation platform that connects services without custom server code. Used to watch SharePoint, Outlook, and OneDrive for new files and forward them to Databricks via REST API. See [Power Automate](Common%20Definitions/power-automate.md).
 
 ---
 
@@ -76,7 +76,7 @@ Each request includes:
 - An **Authorization header** containing a [Personal Access Token](#personal-access-token-pat) to prove identity
 - Optionally, a **body** with data to send (for POST and PUT requests)
 
-See [HTTP Methods](common-definitions/power-automate.md#http-methods) for the full verb reference.
+See [HTTP Methods](Common%20Definitions/power-automate.md#http-methods) for the full verb reference.
 
 ---
 
