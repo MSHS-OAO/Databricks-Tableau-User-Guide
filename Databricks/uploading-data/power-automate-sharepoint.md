@@ -55,6 +55,9 @@ Without these scopes, requests return `403 Forbidden: required scopes: <scope>`.
 
 ### Action 1: When a file is created (properties only)
 
+![PA Sharepoint](../../images/PASharepoint1.PNG)
+
+
 | Field | Value |
 |---|---|
 | Site Address | Balanced Scorecards Automation |
