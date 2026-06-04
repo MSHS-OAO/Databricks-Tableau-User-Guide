@@ -48,13 +48,23 @@ Subject filter: [DATA FEED]
 
 This limits the trigger to emails whose subject contains `[DATA FEED]`, reducing noise.
 
-### Action 2: Apply to each — loop over attachments
-
-Outlook emails can have multiple attachments. Use an **Apply to each** loop:
-
+**Note :** 
+- Outlook emails can have multiple attachments. Use an **Apply to each** loop:
 - **Select an output from previous steps**: `Attachments` (dynamic content from trigger)
+![Power Automate Workflow](../../images/ApplyEach.PNG)
 
-Inside the loop, add the upload and job-trigger actions so each attachment is processed.
+
+
+### Action 2: Compose
+
+Compose action lets you rename the file. For example if file is sent as `KPI REPORT - RAW DATA V4_V2.xls`, You may use compose action to append date to file name `KPI REPORT - RAW DATA V4_V2 2026-06-04.xls` and send it Databricks. 
+
+![Power Automate Workflow](../../images/Compose.PNG)
+
+Power Automate Expression Shown in image above:
+```
+concat(replace(triggerOutputs()?['body/attachments'][0]?['name'], concat('.', last(split(triggerOutputs()?['body/attachments'][0]?['name'], '.'))), ''), ' ', formatDateTime(triggerOutputs()?['body/receivedDateTime'], 'yyyy-MM-dd'), '.', last(split(triggerOutputs()?['body/attachments'][0]?['name'], '.')))
+```
 
 ### Action 3: HTTP PUT — Upload to Volume
 
