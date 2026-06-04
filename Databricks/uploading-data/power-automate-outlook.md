@@ -9,10 +9,11 @@ This pipeline watches an Outlook mailbox for emails with file attachments and au
 Outlook Inbox
         ↓ (email with attachment arrives)
 Power Automate Flow
-        ↓ (3 actions)
+        ↓ (4 actions)
    1. When a new email arrives (V3) — Outlook trigger
    2. compose file name
    3. HTTP PUT → Databricks Files API — uploads to Volume
+   4. Send E-mail
         ↓
 Databricks Job (notebook)
         ↓
