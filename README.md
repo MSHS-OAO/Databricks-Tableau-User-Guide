@@ -9,18 +9,18 @@
 
 ### Databricks
 - Uploading Data (DT)
-  - [Reading Oracle Data](uploading-data/reading-oracle-data.md)
+  - [Reading Oracle Data](Databricks/uploading-data/reading-oracle-data.md)
   - Power Automate
-    - [Sharepoint](uploading-data/power-automate-sharepoint.md)
-    - [Outlook](uploading-data/power-automate-outlook.md)
-    - [One Drive Request Files](uploading-data/power-automate-onedrive-request-files.md)
+    - [Sharepoint](Databricks/uploading-data/power-automate-sharepoint.md)
+    - [Outlook](Databricks/uploading-data/power-automate-outlook.md)
+    - [One Drive Request Files](Databricks/uploading-data/power-automate-onedrive-request-files.md)
 - Conventions (GL)
-  - [Knowing what Compute to use?](databricks/conventions/compute.md)
-  - [Naming Conventions](databricks/conventions/naming-conventions.md)
-  - [Github Policies](databricks/conventions/github-policies.md)
-  - [Jobs Scheduling](databricks/conventions/job-scheduling.md)
+  - [Knowing what Compute to use?](Databricks/conventions/compute.md)
+  - [Naming Conventions](Databricks/conventions/naming-conventions.md)
+  - [Github Policies](Databricks/conventions/github-policies.md)
+  - [Jobs Scheduling](Databricks/conventions/job-scheduling.md)
 - Catalogue Organization (GL)
-  - [Schema vs Table vs Volume](databricks/catalog-organization.md)
+  - [Schema vs Table vs Volume](Databricks/catalog-organization.md)
 
 ### Tableau
 - Conventions
@@ -36,5 +36,5 @@
   - Spark Secrets 
 - Extract vs Live (GL)
 - Oracle Cloud Wallet (DT)
-  - [Wallet Extraction](oracle-cloud-wallet/wallet-extraction.md)
-  - [DSN Configuration (Schemas)](oracle-cloud-wallet/dsn-configuration.md)
+  - [Wallet Extraction](Admin%20Guide/oracle-cloud-wallet/wallet-extraction.md)
+  - [DSN Configuration (Schemas)](Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md)

@@ -98,4 +98,4 @@ Configure email alerts on job failure:
 
 Use [Serverless Compute](../Common%20Definitions.md#serverless-compute) for jobs that run infrequently or need fast startup. Serverless clusters start in under 30 seconds and cost nothing when idle.
 
-Use a **dedicated cluster** only if the job needs specific libraries or configurations not available on serverless. See [Knowing What Compute to Use](../databricks/conventions/compute.md) for the full decision guide.
+Use a **dedicated cluster** only if the job needs specific libraries or configurations not available on serverless. See [Knowing What Compute to Use](../Databricks/conventions/compute.md) for the full decision guide.
