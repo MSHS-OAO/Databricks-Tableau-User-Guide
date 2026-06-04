@@ -1,6 +1,6 @@
 # Power Automate — SharePoint to Databricks
 
-End-to-end event-driven pipeline that uploads SharePoint files to a Databricks Catalog [Volume](../../Common%20Definitions.md#volume).
+End-to-end event-driven pipeline that uploads SharePoint files to a Databricks Catalog Volume.
 
 ## Architecture
 
