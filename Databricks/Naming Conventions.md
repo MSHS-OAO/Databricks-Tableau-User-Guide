@@ -6,7 +6,7 @@ Use names that describe the project and the data, not the person who created the
 
 ## Schemas
 
-Name each [schema](../Common%20Definitions.md) with the project name. Keep the [schema](../Common%20Definitions.md) name short, lowercase, and easy to understand at a glance. Always use `snake_case`.
+Name each [schema](../Common%20Definitions.md#databricks-terms) with the project name. Keep the [schema](../Common%20Definitions.md#databricks-terms) name short, lowercase, and easy to understand at a glance. Always use `snake_case`.
 
 Example:
 
@@ -18,7 +18,7 @@ balanced_scorecards
 
 ## Tables And Volumes
 
-Use `snake_case` for [tables](../Common%20Definitions.md) and [volumes](../Common%20Definitions.md). Keep names lowercase and separate words with underscores.
+Use `snake_case` for [tables](../Common%20Definitions.md#databricks-terms) and [volumes](../Common%20Definitions.md#databricks-terms). Keep names lowercase and separate words with underscores.
 
 Examples:
 
@@ -31,5 +31,5 @@ model_output_files
 
 ## Team Rule
 
-- [Schema](../Common%20Definitions.md) names identify the project.
-- [Schema](../Common%20Definitions.md), [table](../Common%20Definitions.md), and [volume](../Common%20Definitions.md) names use `snake_case`.
+- [Schema](../Common%20Definitions.md#databricks-terms) names identify the project.
+- [Schema](../Common%20Definitions.md#databricks-terms), [table](../Common%20Definitions.md#databricks-terms), and [volume](../Common%20Definitions.md#databricks-terms) names use `snake_case`.
