@@ -31,7 +31,6 @@
    2. [Extract vs. Live Connection](Admin%20Guide/Tableau/Extract%20vs.%20Live%20Connection.md)
    3. [Publishing a Tableau Dataset](Admin%20Guide/Tableau/Publishing%20a%20Tableau%20Dataset.md)
 2. [Compute Creation](Admin%20Guide/Compute%20Creation.md)
-   1. Spark Secrets
 4. Oracle Cloud Wallet (DT)
    1. Wallet Extraction
    2. DSN Configuration (Schemas)
