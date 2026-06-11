@@ -47,4 +47,4 @@ flowchart LR
     class USR gray
 ```
 
-## ## Databricks/Tableau - Future State
+## Databricks/Tableau - Future State
