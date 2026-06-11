@@ -23,15 +23,15 @@ flowchart LR
     end
 
     EPIC --> ORA
-    ORA <-->|DBI queries| SHINY
-    ORA -->|DBI queries| RPT
+    ORA <-->|retrieve, add, modify, or delete rows of data| SHINY
+    ORA -->|retrieve, add, modify, or delete rows of data| RPT
     EMAIL -->|Manual| XLS
     XLS --> SHINY
     XLS --> RPT
     GH <-->|version control / deploy| SHINY
     GH <-->|version control / deploy| RPT
     SHINY -->|real time visualization| USR
-    RPT --> USR
+    RPT -->|snapshot visualization| USR
     USR -->|real time inputs| SHINY
     RS <--> |develop / approve|GH
     
