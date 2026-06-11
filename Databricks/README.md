@@ -78,6 +78,7 @@ flowchart LR
     GH <-->|develop / version control / deploy| JOBS
     DLT -->|live or extract connection| TAB
     TAB --> USR
+    USR --> EMAIL
 
     classDef navy fill:#212070,stroke:#212070,color:#ffffff
     classDef cyan fill:#06ABEB,stroke:#0689BC,color:#ffffff
