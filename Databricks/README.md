@@ -69,7 +69,6 @@ flowchart LR
     subgraph Users["End Users"]
         USR[Ops Leadership / Stakeholders]
     end
-
     EPIC --> ORA
     EMAIL -->|Power Automate| VOL
     ORA -->|CRUD| JOBS
@@ -79,14 +78,12 @@ flowchart LR
     DLT -->|live or extract connection| TAB
     TAB --> USR
     USR --> EMAIL
-
     classDef navy fill:#212070,stroke:#212070,color:#ffffff
     classDef cyan fill:#06ABEB,stroke:#0689BC,color:#ffffff
     classDef magenta fill:#DC298D,stroke:#B02171,color:#ffffff
     classDef gray fill:#63666A,stroke:#63666A,color:#ffffff
-    class EPIC,ORA,EMAIL,PA navy
+    class EPIC,ORA,EMAIL navy
     class GH cyan
-    class VOL,DLT,JOBS magenta
-    class TAB magenta
+    class VOL,DLT,JOBS,TAB magenta
     class USR gray
 ```
