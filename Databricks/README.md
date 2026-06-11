@@ -90,7 +90,8 @@ flowchart LR
     class VOL,DLT,JOBS,TAB magenta
     class USR,INP gray
 ```
-
+Note:
+- CRUD : Create, Read, Update and Delete
 ## Databricks/Tableau/Power Automate - Future State
 ```mermaid
 flowchart LR
@@ -128,4 +129,5 @@ flowchart LR
     class VOL,DLT,JOBS,TAB magenta
     class USR,INP gray
 ```
-
+Note:
+- CRUD : Create, Read, Update and Delete
