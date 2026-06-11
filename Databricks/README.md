@@ -48,3 +48,46 @@ Note:
 - internal refresh procs and views : Oracle provided abilities through `Oracle Procedures Module` to create a job and run based on specified cadence to refresh tables 
 
 ## Databricks/Tableau/Power Automate - Future State
+```mermaid
+flowchart LR
+    subgraph Sources["Data Sources"]
+        EPIC[Epic Clarity Extracts]
+        ORA[("Oracle ADW<br>(internal refresh procs and views)")]
+        EMAIL[Data Dumps via Email]
+        PA[Power Automate Flow]
+    end
+    subgraph DBX["Databricks"]
+        VOL[Unity Catalog Volumes]
+        DLT[Delta Tables<br>Bronze / Silver / Gold]
+        JOBS[Python Notebooks / Scheduled Jobs]
+    end
+    subgraph DevOps["Development"]
+        GH[GitHub Repos]
+    end
+    subgraph Viz["Visualization"]
+        TAB[Tableau Dashboards]
+    end
+    subgraph Users["End Users"]
+        USR[Ops Leadership / Stakeholders]
+    end
+
+    EPIC --> ORA
+    EMAIL -->|automated| PA
+    PA --> VOL
+    ORA -->|oracledb / JDBC| JOBS
+    VOL --> JOBS
+    JOBS --> DLT
+    GH <-->|develop / version control / deploy| JOBS
+    DLT -->|live or extract connection| TAB
+    TAB --> USR
+
+    classDef navy fill:#212070,stroke:#212070,color:#ffffff
+    classDef cyan fill:#06ABEB,stroke:#0689BC,color:#ffffff
+    classDef magenta fill:#DC298D,stroke:#B02171,color:#ffffff
+    classDef gray fill:#63666A,stroke:#63666A,color:#ffffff
+    class EPIC,ORA,EMAIL,PA navy
+    class GH cyan
+    class VOL,DLT,JOBS magenta
+    class TAB magenta
+    class USR gray
+```
