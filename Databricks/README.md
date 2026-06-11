@@ -24,16 +24,18 @@ flowchart LR
 
     EPIC --> ORA
     ORA <-->|retrieve, add, modify, or delete rows of data| SHINY
-    ORA -->|retrieve, add, modify, or delete rows of data| RPT
+    ORA <-->|retrieve, add, modify, or delete rows of data| RPT
     EMAIL -->|Manual| XLS
     XLS --> SHINY
-    XLS --> RPT
+    XLS <--> RPT
     GH -->|version control / deploy| SHINY
     GH -->|version control / deploy| RPT
     SHINY -->|real time visualization| USR
     RPT -->|snapshot visualization| USR
     USR -->|real time inputs| SHINY
-    RS <--> |develop / approve|GH
+    RS <-->|develop / approve|GH
+    RS <-->|retrieve, add, modify, or delete rows of data| ORA
+    RS <--> XLS
     
 
     classDef navy fill:#212070,stroke:#212070,color:#ffffff
