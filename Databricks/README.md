@@ -28,8 +28,8 @@ flowchart LR
     EMAIL -->|Manual| XLS
     XLS --> SHINY
     XLS --> RPT
-    GH <-->|version control / deploy| SHINY
-    GH <-->|version control / deploy| RPT
+    GH -->|version control / deploy| SHINY
+    GH -->|version control / deploy| RPT
     SHINY -->|real time visualization| USR
     RPT -->|snapshot visualization| USR
     USR -->|real time inputs| SHINY
