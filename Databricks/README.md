@@ -25,7 +25,7 @@ flowchart LR
     EPIC --> ORA
     ORA <-->|DBI queries| SHINY
     ORA -->|DBI queries| RPT
-    EMAIL --> RPT
+    EMAIL --> XLS
     XLS --> SHINY
     XLS --> RPT
     GH <-->|version control / deploy| SHINY
