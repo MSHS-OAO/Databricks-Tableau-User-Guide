@@ -31,7 +31,7 @@ flowchart LR
     GH -->|version control / deploy| SHINY
     GH -->|version control / deploy| RPT
     SHINY -->|real-time visualization| USR
-    RPT -->|snapshot visualization| USR
+    RPT e1@-->|snapshot visualization| USR
     USR -->|real-time inputs| SHINY
 
     classDef navy fill:#212070,stroke:#212070,color:#ffffff
@@ -42,7 +42,7 @@ flowchart LR
     class EPIC,ORA,EMAIL,XLS navy
     class RS,GH cyan
     class SHINY,RPT magenta
-    class RPT animate
+    class e1 animate
     class USR gray
 ```
 Note:
