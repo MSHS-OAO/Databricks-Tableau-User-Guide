@@ -57,8 +57,8 @@ flowchart LR
     end
     subgraph DBX["Databricks"]
         VOL[Unity Catalog Volumes]
-        DLT[Delta Tables<br>Bronze / Silver / Gold]
         JOBS[Python Notebooks / Scheduled Jobs]
+        DLT[Delta Tables<br>Bronze / Silver / Gold]
     end
     subgraph DevOps["Development"]
         GH[GitHub Repos]
@@ -68,6 +68,7 @@ flowchart LR
     end
     subgraph Users["End Users"]
         USR[Ops Leadership / Stakeholders]
+        INP[Input Submissions]
     end
     EPIC --> ORA
     EMAIL -->|Power Automate| VOL
@@ -77,7 +78,8 @@ flowchart LR
     GH <-->|develop / version control / deploy| JOBS
     DLT -->|live or extract connection| TAB
     TAB --> USR
-    USR --> EMAIL
+    USR --> INP
+    INP -.->|via Email/Sharepoint/OneDrive| VOL
     classDef navy fill:#212070,stroke:#212070,color:#ffffff
     classDef cyan fill:#06ABEB,stroke:#0689BC,color:#ffffff
     classDef magenta fill:#DC298D,stroke:#B02171,color:#ffffff
@@ -85,5 +87,5 @@ flowchart LR
     class EPIC,ORA,EMAIL navy
     class GH cyan
     class VOL,DLT,JOBS,TAB magenta
-    class USR gray
+    class USR,INP gray
 ```
