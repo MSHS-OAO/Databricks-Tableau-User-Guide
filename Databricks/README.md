@@ -45,9 +45,6 @@ flowchart LR
     class e1 animate
     class USR gray
 ```
-Note:
-- CRUD : Create, Read, Update and Delete
-- internal refresh procs and views : Oracle provided abilities through `Oracle Procedures Module` to create a job and run based on specified cadence to refresh tables 
 
 ## Databricks/Tableau/Power Automate - Transitional State
 ```mermaid
@@ -90,8 +87,7 @@ flowchart LR
     class VOL,DLT,JOBS,TAB magenta
     class USR,INP gray
 ```
-Note:
-- CRUD : Create, Read, Update and Delete
+
 ## Databricks/Tableau/Power Automate - Future State
 ```mermaid
 flowchart LR
@@ -133,3 +129,4 @@ flowchart LR
 ```
 Note:
 - CRUD : Create, Read, Update and Delete
+- internal refresh procs and views : Oracle provided abilities through `Oracle Procedures Module` to create a job and run based on specified cadence to refresh tables 
