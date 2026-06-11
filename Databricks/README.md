@@ -4,7 +4,7 @@ flowchart LR
     subgraph Sources["Data Sources"]
         EPIC[Epic Clarity Extracts]
         ORA[("Oracle ADW<br>(internal refresh procs and views)")]
-        EMAIL[Data Dumps via Email]
+        EMAIL[Data Dumps via Email/Sharepoint/One Drive]
         XLS[Excel / CSV Inputs in Shared Drive]
     end
     subgraph DevOps["Development"]
@@ -53,8 +53,7 @@ flowchart LR
     subgraph Sources["Data Sources"]
         EPIC[Epic Clarity Extracts]
         ORA[("Oracle ADW<br>(internal refresh procs and views)")]
-        EMAIL[Data Dumps via Email]
-        PA[Power Automate Flow]
+        EMAIL[Data Dumps via Email/Sharepoint/One Drive]
     end
     subgraph DBX["Databricks"]
         VOL[Unity Catalog Volumes]
@@ -72,11 +71,10 @@ flowchart LR
     end
 
     EPIC --> ORA
-    EMAIL -->|automated| PA
-    PA --> VOL
+    EMAIL -->|Power Automate| VOL
     ORA -->|oracledb / JDBC| JOBS
-    VOL --> JOBS
-    JOBS --> DLT
+    VOL <--> JOBS
+    JOBS <--> DLT
     GH <-->|develop / version control / deploy| JOBS
     DLT -->|live or extract connection| TAB
     TAB --> USR
