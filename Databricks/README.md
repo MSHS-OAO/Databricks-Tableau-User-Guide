@@ -5,7 +5,7 @@ flowchart LR
         EPIC[Epic Clarity Extracts]
         ORA[("Oracle ADW<br>(internal refresh procs and views)")]
         EMAIL[Data Dumps via Email]
-        XLS[Manual Excel / CSV Inputs in Shared Drive]
+        XLS[Excel / CSV Inputs in Shared Drive]
     end
     subgraph DevOps["Development"]
         RS[POSIT Workbench]
