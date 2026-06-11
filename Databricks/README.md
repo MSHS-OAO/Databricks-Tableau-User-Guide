@@ -23,7 +23,7 @@ flowchart LR
     end
 
     EPIC --> ORA
-    ORA -->|DBI queries| SHINY
+    ORA <-->|DBI queries| SHINY
     ORA -->|DBI queries| RPT
     EMAIL --> RPT
     XLS --> SHINY
