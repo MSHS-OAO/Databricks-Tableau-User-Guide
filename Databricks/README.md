@@ -2,7 +2,7 @@
 ```mermaid
 flowchart LR
     subgraph Sources["Data Sources"]
-        EPIC[Epic Clarity Extracts]
+        EPIC[Epic/MSX Clarity Extracts]
         ORA[("Oracle ADW<br>(internal refresh procs and views)")]
         EMAIL[Data Dumps via Email/Sharepoint/One Drive]
         XLS[Excel / CSV Inputs in Shared Drive]
@@ -53,7 +53,7 @@ Note:
 ```mermaid
 flowchart LR
     subgraph Sources["Data Sources"]
-        EPIC[Epic Clarity Extracts]
+        EPIC[Epic/MSX Clarity Extracts]
         ORA[("Oracle ADW<br>(internal refresh procs and views)")]
         EMAIL[Data Dumps via Email/Sharepoint/One Drive]
     end
@@ -96,6 +96,7 @@ Note:
 ```mermaid
 flowchart LR
     subgraph Sources["Data Sources"]
+        EPIC[Epic/MSX Clarity Extracts]
         EMAIL[Data Dumps via Email/Sharepoint/One Drive]
     end
     subgraph DBX["Databricks"]
@@ -112,6 +113,7 @@ flowchart LR
     subgraph Users["End Users"]
         USR[Ops Leadership / Stakeholders]
     end
+    EPIC -->DLT
     EMAIL -->|Power Automate| VOL
     VOL <--> JOBS
     JOBS <-->|CRUD| DLT
