@@ -3,7 +3,7 @@
 flowchart LR
     subgraph Sources["Data Sources"]
         EPIC[Epic Clarity Extracts]
-        ORA[("Oracle ADW<br>(internal refresh procs)")]
+        ORA[("Oracle ADW<br>(internal refresh procs and views)")]
         EMAIL[Data Dumps via Email]
         XLS[Manual Excel / CSV Inputs in Shared Drive]
     end
@@ -43,4 +43,8 @@ flowchart LR
     class SHINY,RPT magenta
     class USR gray
 ```
+Note:
+- CRUD : Create, Read, Update and Delete
+- internal refresh procs and views : Oracle provided abilities to to create a job that can be used to refresh tables based on specified cadence
+
 ## Databricks/Tableau - Future State
