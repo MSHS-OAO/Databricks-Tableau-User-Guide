@@ -1,6 +1,4 @@
-## Databricks
-
-### Current State
+## Oracle/Posit - Current State
 ```mermaid
 flowchart LR
     subgraph Sources["Data Sources"]
