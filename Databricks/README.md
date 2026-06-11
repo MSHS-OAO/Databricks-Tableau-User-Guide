@@ -72,9 +72,9 @@ flowchart LR
 
     EPIC --> ORA
     EMAIL -->|Power Automate| VOL
-    ORA -->|oracledb / JDBC| JOBS
+    ORA -->|CRUD| JOBS
     VOL <--> JOBS
-    JOBS <--> DLT
+    JOBS <-->|CRUD| DLT
     GH <-->|develop / version control / deploy| JOBS
     DLT -->|live or extract connection| TAB
     TAB --> USR
