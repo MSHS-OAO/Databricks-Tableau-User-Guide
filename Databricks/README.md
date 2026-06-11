@@ -35,12 +35,14 @@ flowchart LR
     USR -->|real-time inputs| SHINY
 
     classDef navy fill:#212070,stroke:#212070,color:#ffffff
+    classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite
     classDef cyan fill:#06ABEB,stroke:#0689BC,color:#ffffff
     classDef magenta fill:#DC298D,stroke:#B02171,color:#ffffff
     classDef gray fill:#63666A,stroke:#63666A,color:#ffffff
     class EPIC,ORA,EMAIL,XLS navy
     class RS,GH cyan
     class SHINY,RPT magenta
+    class RPT animate
     class USR gray
 ```
 Note:
@@ -68,18 +70,16 @@ flowchart LR
     end
     subgraph Users["End Users"]
         USR[Ops Leadership / Stakeholders]
-        INP[Input Submissions]
     end
     EPIC --> ORA
     EMAIL -->|Power Automate| VOL
-    ORA -->|CRUD| JOBS
+    ORA <-->|CRUD| JOBS
     VOL <--> JOBS
     JOBS <-->|CRUD| DLT
     GH <-->|develop / version control / deploy| JOBS
     DLT -->|live or extract connection| TAB
     TAB --> USR
-    USR --> INP
-    INP -.->|via Email/Sharepoint/OneDrive| VOL
+    USR --> EMAIL
     classDef navy fill:#212070,stroke:#212070,color:#ffffff
     classDef cyan fill:#06ABEB,stroke:#0689BC,color:#ffffff
     classDef magenta fill:#DC298D,stroke:#B02171,color:#ffffff
