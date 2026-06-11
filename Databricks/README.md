@@ -32,7 +32,7 @@ flowchart LR
     GH <-->|version control / deploy| RPT
     SHINY -->|real time visualization| USR
     RPT --> USR
-    USR -->|app inputs| SHINY
+    USR -->|real time inputs| SHINY
     RS <--> |develop / approve|GH
     
 
