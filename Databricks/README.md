@@ -24,7 +24,7 @@ flowchart LR
     ORA <-->|CRUD| SHINY
     ORA <-->|CRUD| RPT
     ORA <-->|CRUD| RS
-    XLS --> SHINY
+    XLS <--> SHINY
     XLS <--> RPT
     XLS <--> RS
     RS <-->|develop / version control| GH
