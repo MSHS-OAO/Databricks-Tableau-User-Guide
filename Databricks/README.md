@@ -2,7 +2,7 @@
 ```mermaid
 flowchart LR
     subgraph Sources["Data Sources"]
-        EPIC[Epic/MSX Clarity Extracts]
+        EPIC[Epic Clarity/MSX Extracts]
         ORA[("Oracle ADW<br>(internal refresh procs and views)")]
         EMAIL[Data Dumps via Email/Sharepoint/One Drive]
         XLS[Excel / CSV Inputs in Shared Drive]
@@ -50,7 +50,7 @@ flowchart LR
 ```mermaid
 flowchart LR
     subgraph Sources["Data Sources"]
-        EPIC[Epic/MSX Clarity Extracts]
+        EPIC[Epic Clarity/MSX Extracts]
         ORA[("Oracle ADW<br>(internal refresh procs and views)")]
         EMAIL[Data Dumps via Email/Sharepoint/One Drive]
     end
@@ -92,7 +92,7 @@ flowchart LR
 ```mermaid
 flowchart LR
     subgraph Sources["Data Sources"]
-        EPIC[Epic/MSX Clarity Extracts]
+        EPIC[Epic Clarity/MSX Extracts]
         EMAIL[Data Dumps via Email/Sharepoint/One Drive]
     end
     subgraph DBX["Databricks"]
