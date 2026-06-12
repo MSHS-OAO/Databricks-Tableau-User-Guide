@@ -130,4 +130,4 @@ flowchart LR
 ```
 Note:
 - CRUD : Create, Read, Update and Delete
-- internal refresh procs and views : Oracle provided abilities through `Oracle Procedures Module` to create a job and run based on specified cadence to refresh tables
+- internal refresh procs and views : Oracle has capabilities through `Oracle Procedures Module` to create a job and run based on specified cadence to refresh tables
