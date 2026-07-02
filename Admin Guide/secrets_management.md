@@ -95,6 +95,7 @@ for acl in w.secrets.list_acls(scope="oao_secrets"):
 
 # Remove an ACL
 # w.secrets.delete_acl(scope="oao_secrets", principal="user@mssm.edu")```
+```
 
 List who has access:
 
