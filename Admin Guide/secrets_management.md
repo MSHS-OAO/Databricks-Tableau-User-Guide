@@ -47,7 +47,7 @@ for scope in w.secrets.list_scopes():
 
 ### Set parameters - USERNAME/PASSWORD - Add secrets to the scope
 
-```bash
+```python
 w.secrets.put_secret("oao_secrets","OAO_PRODUCTION",string_value ="<password>")
 w.secrets.put_secret("oao_secrets","OAO_DEVELOPMENT",string_value ="<password>")
 w.secrets.put_secret("oao_secrets","ORACLE_JDBC_URL",string_value ="<URL>")
