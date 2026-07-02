@@ -33,7 +33,7 @@ Secrets are created with the Databricks CLI or the REST API — not in a noteboo
 from databricks.sdk import WorkspaceClient
 w = WorkspaceClient()
 w.secrets.create_scope(scope="oao_secrets")
-```bash
+```
 
 If scope already exists, use a different name for scope
 
