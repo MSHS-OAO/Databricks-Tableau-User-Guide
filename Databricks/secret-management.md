@@ -1,0 +1,179 @@
+# Databricks Secret Management
+
+Credentials — database passwords, API tokens, wallet passwords — must never be hardcoded in a notebook or committed to GitHub. Databricks Secrets store these values encrypted and expose them to code at runtime without ever printing them in plain text.
+
+**Compute**: Works on all compute types (Serverless, job clusters, all-purpose). No special setup required beyond the Databricks CLI for creating secrets.
+
+## Why Not Environment Variables or Hardcoding
+
+| Approach | Problem |
+|---|---|
+| Hardcoded string in notebook | Visible to anyone with read access; leaks into GitHub on commit |
+| `os.environ.get(...)` | Env vars set on a cluster are visible in the cluster config and Spark UI; not access-controlled per user |
+| Databricks Secrets | Encrypted at rest, access-controlled per scope, auto-redacted from notebook output |
+
+Our current `db_config.py` reads Oracle credentials from `os.environ.get(...)`. The [Migrating db_config.py](#migrating-db_configpy-to-secrets) section below shows how to move it to Secrets.
+
+## Concepts
+
+- **Secret scope** — a named container for a group of secrets (e.g., `oracle`, `sharepoint`)
+- **Secret** — a single key-value pair inside a scope (e.g., key `password_prod`)
+- **Backend** — where the scope is stored:
+  - **Databricks-backed** — stored in the Databricks control plane. Simplest option.
+  - **Azure Key Vault-backed** — the scope maps to an Azure Key Vault. Use when the org already manages secrets centrally in Key Vault.
+
+## Creating Secrets
+
+Secrets are created with the Databricks CLI or the REST API — not in a notebook (so the value never lands in notebook history).
+
+### Install and configure the CLI
+
+```bash
+pip install databricks-cli
+databricks configure --token
+# Host: https://adb-<workspace-id>.<region>.azuredatabricks.net
+# Token: <your Personal Access Token>
+```
+
+### Create a scope
+
+```bash
+databricks secrets create-scope oracle
+```
+
+List existing scopes:
+
+```bash
+databricks secrets list-scopes
+```
+
+### Add secrets to the scope
+
+```bash
+databricks secrets put-secret oracle username_prod
+databricks secrets put-secret oracle password_prod
+databricks secrets put-secret oracle username_dev
+databricks secrets put-secret oracle password_dev
+```
+
+Each command opens an editor to paste the value, keeping it out of your shell history. To pass a value inline (less safe — it lands in shell history):
+
+```bash
+databricks secrets put-secret oracle password_prod --string-value "s3cr3t"
+```
+
+List keys in a scope (values are never shown):
+
+```bash
+databricks secrets list-secrets oracle
+```
+
+## Reading Secrets in a Notebook
+
+Use `dbutils.secrets.get`:
+
+```python
+username = dbutils.secrets.get(scope="oracle", key="username_prod")
+password = dbutils.secrets.get(scope="oracle", key="password_prod")
+```
+
+### Automatic redaction
+
+Databricks redacts secret values from all notebook output. If you try to print one, you get `[REDACTED]`:
+
+```python
+print(password)   # -> [REDACTED]
+```
+
+Redaction is literal — it masks the exact secret string wherever it appears in output. It does **not** protect against writing a secret to a file or an external API on purpose. Never do that.
+
+## Migrating db_config.py to Secrets
+
+Replace the `os.environ.get(...)` calls with `dbutils.secrets.get(...)`. Because `dbutils` is only available inside a notebook, pass the values into the helper rather than calling `dbutils` inside `db_config.py`.
+
+**Before** (`db_config.py`):
+
+```python
+conn = oracledb.connect(
+    user=os.environ.get("ORACLE_PRODUCTION"),
+    password=os.environ.get("ORACLE_PASSWORD_PROD"),
+    dsn="adwdbtst_low",
+    config_dir=wallet_dir,
+    wallet_location=wallet_dir,
+    wallet_password=""
+)
+```
+
+**After** (`db_config.py` — accepts credentials as arguments):
+
+```python
+import oracledb
+
+def get_connection(user, password, schema="development"):
+    wallet_dir = "/Volumes/opsanalytics_adb_workspace01/default/oracle_wallet"
+    return oracledb.connect(
+        user=user,
+        password=password,
+        dsn="adwdbtst_low",
+        config_dir=wallet_dir,
+        wallet_location=wallet_dir,
+        wallet_password=dbutils.secrets.get(scope="oracle", key="wallet_password")
+    )
+```
+
+**In the notebook** — read secrets and pass them in:
+
+```python
+import sys
+sys.path.append("/Volumes/opsanalytics_adb_workspace01/default/oracle_connections")
+from db_config import get_connection
+
+user = dbutils.secrets.get(scope="oracle", key="username_prod")
+password = dbutils.secrets.get(scope="oracle", key="password_prod")
+
+conn = get_connection(user, password, schema="production")
+```
+
+This keeps `dbutils` in the notebook (where it exists) and leaves `db_config.py` free of any hardcoded or environment-based credentials.
+
+## Access Control (Secret ACLs)
+
+Scopes have permissions so only the right people and jobs can read a secret.
+
+| Permission | Allows |
+|---|---|
+| `READ` | Read secret values and list keys in the scope |
+| `WRITE` | Create and delete secrets in the scope |
+| `MANAGE` | Change permissions on the scope |
+
+Grant read access to a group:
+
+```bash
+databricks secrets put-acl oracle data-engineers READ
+```
+
+List who has access:
+
+```bash
+databricks secrets list-acls oracle
+```
+
+For production jobs, grant `READ` to the service principal that runs the job — not to individual users. See [Job Scheduling](#) for the service-principal convention.
+
+## Best Practices
+
+- One scope per system or data domain (`oracle`, `sharepoint`, `azure_storage`) — not one giant scope
+- Name keys by environment and role: `username_prod`, `password_dev`, `wallet_password`
+- Never `print()`, log, or write a secret to a table, file, or external request
+- Rotate secrets when a team member leaves or a token is suspected compromised — `put-secret` with the same key overwrites the old value
+- Prefer a service principal (not a personal PAT) for the token behind production secret reads
+- Store the Oracle wallet in a Volume, and its wallet password as a secret — never commit the wallet or its password
+
+## Common Errors
+
+| Error | Cause | Fix |
+|---|---|---|
+| `RESOURCE_DOES_NOT_EXIST: Secret scope 'x' does not exist` | Scope not created, or typo | `databricks secrets list-scopes` to verify the name |
+| `PERMISSION_DENIED` on `secrets.get` | Caller lacks `READ` on the scope | Grant `READ` via `put-acl` to the user or service principal |
+| Value prints as `[REDACTED]` | Expected — redaction is working | Not an error; use the value in code, don't print it |
+| `dbutils is not defined` in `db_config.py` | `dbutils` only exists in a notebook | Read the secret in the notebook and pass it into the function |
