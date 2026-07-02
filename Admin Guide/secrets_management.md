@@ -33,44 +33,22 @@ Secrets are created with the Databricks CLI or the REST API — not in a noteboo
 from databricks.sdk import WorkspaceClient
 w = WorkspaceClient()
 w.secrets.create_scope(scope="oao_secrets")
-```
+```bash
 
-### Set parameters - USERNAME/PASSWORD
+
+### Set parameters - USERNAME/PASSWORD - Add secrets to the scope
+
+```bash
 w.secrets.put_secret("oao_secrets","OAO_PRODUCTION",string_value ="<password>")
 w.secrets.put_secret("oao_secrets","OAO_DEVELOPMENT",string_value ="<password>")
 w.secrets.put_secret("oao_secrets","ORACLE_JDBC_URL",string_value ="<URL>")
-
-List existing scopes:
-
-```bash
-databricks secrets list-scopes
-```
-
-### Add secrets to the scope
-
-```bash
-databricks secrets put-secret oracle username_prod
-databricks secrets put-secret oracle password_prod
-databricks secrets put-secret oracle username_dev
-databricks secrets put-secret oracle password_dev
 ```
 
 
 ## Reading Secrets in a Notebook
-
-```bash
-secret_value = dbutils.secrets.get(scope="oao_secrets", key="OAO_PRODUCTION")
-# Use secret_value in your code (e.g., pass to a connection string)
-# print(secret_value)  → will show "[REDACTED]"
-```
-
-## Reading Secrets in a Notebook
-
-Use `dbutils.secrets.get`:
 
 ```python
-username = dbutils.secrets.get(scope="oracle", key="username_prod")
-password = dbutils.secrets.get(scope="oracle", key="password_prod")
+secret_value = dbutils.secrets.get(scope="oao_secrets", key="OAO_PRODUCTION")
 ```
 
 ### Automatic redaction
@@ -78,24 +56,12 @@ password = dbutils.secrets.get(scope="oracle", key="password_prod")
 Databricks redacts secret values from all notebook output. If you try to print one, you get `[REDACTED]`:
 
 ```python
-print(password)   # -> [REDACTED]
+print(secret_value)   # -> [REDACTED]
 ```
 
 Redaction is literal — it masks the exact secret string wherever it appears in output. It does **not** protect against writing a secret to a file or an external API on purpose. Never do that.
 
 
-**In the notebook** — read secrets and pass them in:
-
-```python
-import sys
-sys.path.append("/Volumes/opsanalytics_adb_workspace01/default/oracle_connections")
-from db_config import get_connection
-
-user = dbutils.secrets.get(scope="oracle", key="username_prod")
-password = dbutils.secrets.get(scope="oracle", key="password_prod")
-
-conn = get_connection(user, password, schema="production")
-```
 
 This keeps `dbutils` in the notebook (where it exists) and leaves `db_config.py` free of any hardcoded or environment-based credentials.
 
@@ -111,14 +77,30 @@ Scopes have permissions so only the right people and jobs can read a secret.
 
 Grant read access to a group:
 
-```bash
-databricks secrets put-acl oracle data-engineers READ
-```
+```python
+rom databricks.sdk.service.workspace import AclPermission
+
+# Grant READ access (can retrieve secrets, cannot modify)
+w.secrets.put_acl(scope="oao_secrets", principal="gregory.lenane@mssm.edu", permission=AclPermission.READ)
+
+# Grant WRITE access (can read + add/delete secrets)
+# w.secrets.put_acl(scope="oao_secrets", principal="some-group", permission=AclPermission.WRITE)
+
+# Grant MANAGE access (full control including ACL changes)
+w.secrets.put_acl(scope="oao_secrets", principal="gregory.lenane@mssm.edu", permission=AclPermission.MANAGE)
+
+# List current ACLs on the scope
+for acl in w.secrets.list_acls(scope="oao_secrets"):
+    print(f"{acl.principal}: {acl.permission}")
+
+# Remove an ACL
+# w.secrets.delete_acl(scope="oao_secrets", principal="user@mssm.edu")```
 
 List who has access:
 
-```bash
-databricks secrets list-acls oracle
+```python
+for acl in w.secrets.list_acls(scope="oao_secrets"):
+    print(f"{acl.principal}: {acl.permission}")
 ```
 
 For production jobs, grant `READ` to the service principal that runs the job — not to individual users. See [Job Scheduling](#) for the service-principal convention.
