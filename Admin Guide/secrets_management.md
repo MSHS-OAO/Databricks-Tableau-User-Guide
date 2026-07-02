@@ -9,7 +9,6 @@ Credentials — database passwords, API tokens, wallet passwords — must never 
 | Approach | Problem |
 |---|---|
 | Hardcoded string in notebook | Visible to anyone with read access; leaks into GitHub on commit |
-| `os.environ.get(...)` | Env vars set on a cluster are visible in the cluster config and Spark UI; not access-controlled per user |
 | Databricks Secrets | Encrypted at rest, access-controlled per scope, auto-redacted from notebook output |
 
 Our current `db_config.py` reads Oracle credentials from `os.environ.get(...)`. The [Migrating db_config.py](#migrating-db_configpy-to-secrets) section below shows how to move it to Secrets.
