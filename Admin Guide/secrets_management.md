@@ -25,20 +25,20 @@ Our current `db_config.py` reads Oracle credentials from `os.environ.get(...)`. 
 
 Secrets are created with the Databricks CLI or the REST API — not in a notebook (so the value never lands in notebook history).
 
-### Install and configure the CLI
 
-```bash
-pip install databricks-cli
-databricks configure --token
-# Host: https://adb-<workspace-id>.<region>.azuredatabricks.net
-# Token: <your Personal Access Token>
-```
 
 ### Create a scope
 
 ```bash
-databricks secrets create-scope oracle
+from databricks.sdk import WorkspaceClient
+w = WorkspaceClient()
+w.secrets.create_scope(scope="oao_secrets")
 ```
+
+### Set parameters - USERNAME/PASSWORD
+w.secrets.put_secret("oao_secrets","OAO_PRODUCTION",string_value ="<password>")
+w.secrets.put_secret("oao_secrets","OAO_DEVELOPMENT",string_value ="<password>")
+w.secrets.put_secret("oao_secrets","ORACLE_JDBC_URL",string_value ="<URL>")
 
 List existing scopes:
 
@@ -55,16 +55,13 @@ databricks secrets put-secret oracle username_dev
 databricks secrets put-secret oracle password_dev
 ```
 
-Each command opens an editor to paste the value, keeping it out of your shell history. To pass a value inline (less safe — it lands in shell history):
+
+## Reading Secrets in a Notebook
 
 ```bash
-databricks secrets put-secret oracle password_prod --string-value "s3cr3t"
-```
-
-List keys in a scope (values are never shown):
-
-```bash
-databricks secrets list-secrets oracle
+secret_value = dbutils.secrets.get(scope="oao_secrets", key="OAO_PRODUCTION")
+# Use secret_value in your code (e.g., pass to a connection string)
+# print(secret_value)  → will show "[REDACTED]"
 ```
 
 ## Reading Secrets in a Notebook
