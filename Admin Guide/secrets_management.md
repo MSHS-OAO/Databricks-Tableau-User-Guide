@@ -86,39 +86,6 @@ print(password)   # -> [REDACTED]
 
 Redaction is literal — it masks the exact secret string wherever it appears in output. It does **not** protect against writing a secret to a file or an external API on purpose. Never do that.
 
-## Migrating db_config.py to Secrets
-
-Replace the `os.environ.get(...)` calls with `dbutils.secrets.get(...)`. Because `dbutils` is only available inside a notebook, pass the values into the helper rather than calling `dbutils` inside `db_config.py`.
-
-**Before** (`db_config.py`):
-
-```python
-conn = oracledb.connect(
-    user=os.environ.get("ORACLE_PRODUCTION"),
-    password=os.environ.get("ORACLE_PASSWORD_PROD"),
-    dsn="adwdbtst_low",
-    config_dir=wallet_dir,
-    wallet_location=wallet_dir,
-    wallet_password=""
-)
-```
-
-**After** (`db_config.py` — accepts credentials as arguments):
-
-```python
-import oracledb
-
-def get_connection(user, password, schema="development"):
-    wallet_dir = "/Volumes/opsanalytics_adb_workspace01/default/oracle_wallet"
-    return oracledb.connect(
-        user=user,
-        password=password,
-        dsn="adwdbtst_low",
-        config_dir=wallet_dir,
-        wallet_location=wallet_dir,
-        wallet_password=dbutils.secrets.get(scope="oracle", key="wallet_password")
-    )
-```
 
 **In the notebook** — read secrets and pass them in:
 
