@@ -1,6 +1,6 @@
-
 import oracledb
 import os
+from databricks.sdk.runtime import dbutils
 
 def get_connection(schema="development"):
     # path to wallet and setting connection
@@ -9,8 +9,8 @@ def get_connection(schema="development"):
 
     if schema == "production": 
         conn = oracledb.connect(
-            user=os.environ.get("ORACLE_PRODUCTION"),
-            password=os.environ.get("ORACLE_PASSWORD_PROD"),
+            user="OAO_PRODUCTION",
+            password=dbutils.secrets.get(scope="oao_secrets", key="OAO_PRODUCTION"),
             dsn="adwdbtst_low",
             config_dir=wallet_dir,
             wallet_location=wallet_dir,
@@ -18,12 +18,11 @@ def get_connection(schema="development"):
         )
     else:
         conn = oracledb.connect(
-            user=os.environ.get("ORACLE_DEVELOPMENT"),
-            password=os.environ.get("ORACLE_PASSWORD_DEV"),
+            user="OAO_DEVELOPMENT",
+            password=dbutils.secrets.get(scope="oao_secrets", key="OAO_DEVELOPMENT"),
             dsn="adwdbtst_low",
             config_dir=wallet_dir,
             wallet_location=wallet_dir,
             wallet_password=""
         )          
     return conn
-    
