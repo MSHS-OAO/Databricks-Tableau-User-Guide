@@ -29,12 +29,21 @@ Secrets are created with the Databricks CLI or the REST API — not in a noteboo
 
 ### Create a scope
 
-```bash
+```python
 from databricks.sdk import WorkspaceClient
 w = WorkspaceClient()
 w.secrets.create_scope(scope="oao_secrets")
 ```bash
 
+If scope already exists, use a different name for scope
+
+
+### Listing Scopes
+```python
+# List all secret scopes in the workspace
+for scope in w.secrets.list_scopes():
+    print(f"Scope: {scope.name}, Backend: {scope.backend_type}")
+```
 
 ### Set parameters - USERNAME/PASSWORD - Add secrets to the scope
 
