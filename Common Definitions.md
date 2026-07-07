@@ -16,6 +16,16 @@
 - **Volume**: A governed file storage location inside a schema, often used for uploaded or staged files before they become tables.
 - **Workspace**: The Databricks environment where users write notebooks, run jobs, manage compute, and access governed data.
 
+## dbt Terms
+
+- **dbt**: The SQL transformation framework our team uses after source data has landed in the Catalog.
+- **dbt build**: A dbt command that runs models, tests, snapshots, and seeds for the selected project.
+- **dbt model**: A SQL file in a dbt project that builds a view or table.
+- **dbt source**: A named reference in dbt to an existing upstream table outside the dbt model flow.
+- **Materialization**: The way dbt stores a model result, such as a view or table.
+- **ref**: A dbt function used to reference another dbt model and manage build order.
+- **source**: A dbt function used to reference an upstream source table defined in `schema.yml`.
+
 ## Tableau Terms
 
 - **Datasource**: A reusable Tableau connection layer that defines where data comes from, how Tableau should query it, and the fields, calculations, and metadata available to workbooks.
