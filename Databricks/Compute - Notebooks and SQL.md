@@ -1,5 +1,7 @@
 # Compute - Notebooks and SQL
 
+[Back to Table of Contents](../README.md#table-of-contents)
+
 All code is executed in Databricks by something called [compute](../Common%20Definitions.md#databricks-terms). Only admins are able to create [compute](../Common%20Definitions.md#databricks-terms) and they are responsible for sharing it with the rest of the team. When a new workflow needs [compute](../Common%20Definitions.md#databricks-terms), coordinate with the admins so the right option is selected.
 
 ## Compute Types
@@ -22,43 +24,43 @@ Serverless Starter Warehouse
 OAO_DEVELOPMENT SQL Warehouse
 ```
 
-<u>**Team Guidelines**</u>: Serverless will be used for all non-production code (development and data exploration). Only when the non-production code requires additional resources will we use `OAO_DEVELOPMENT Compute` for [notebooks](../Common%20Definitions.md#databricks-terms) and `OAO_DEVELOPMENT SQL Warehouse` for SQL Editor. For production code, the [compute](../Common%20Definitions.md#databricks-terms) choice will be made case by case depending on the needs of the code.
+<u>**Team Guidelines**</u>: When possible, always use a SQL editor to explore/analyse data. Serverless SQL Starter Warehouse will be used for all SQL queries in the SQL editor during data exploration. Notebooks will be used in 3 main scenarios; visualizing data, querying Oracle DB, complex analysis that SQL can't do. For development in notebooks we will primarily use `OAO_DEVELOPMENT Compute`. For production code, the [compute](../Common%20Definitions.md#databricks-terms) choice will be made case by case depending on the needs of the code.
 
 ## SQL Editor
 
 An example SQL Editor code is stored here: [Query Example](../Code%20Examples/Query%20Example.dbquery.ipynb)
 
-SQL Editors are used when you only need to write SQL. They are best for data exploration and when you want to quickly export a file out of Databricks as `csv` or `excel`. There are two primary ways to start a SQL Editor:
+SQL Editors should be your first option for data analysis. They are best for data exploration and when you want to quickly export a file out of Databricks as `csv` or `excel`. There are two primary ways to start a SQL Editor:
 1. The easiest method is to select the SQL Editor button underneath the SQL section of the left-hand navigation pane. This will open a recent SQL Editor if you have one or prompt you to create one. If you are prompted to create one, it will default to your personal drafts folder.
 
-<img src="../images/sql editor.PNG" alt="Create Git folder dialog"> 
+<img src="../images/sql editor.PNG"> 
 
-2. The second option, if you know where you want the SQL file to exist, is to navigate to that location and create a SQL file from that location.
+2. The second option, if you know where you want the SQL file to exist in the workspace, is to navigate to that location and create a SQL file from that location.
 
-<img src="../images/sql editor folder.PNG" alt="Create Git folder dialog" width="1000"> 
+<img src="../images/sql editor folder.PNG" width="1000"> 
 
 Now that you have created a SQL query file, there are two things to do before you start writing SQL.
 
-<img src="../images/sql editor architecture.PNG" alt="Create Git folder dialog" width="1000"> 
+<img src="../images/sql editor architecture.PNG"" width="1000"> 
 
 1. Select the [catalog](../Common%20Definitions.md#databricks-terms) and [schema](../Common%20Definitions.md#databricks-terms) you want to work in. This example is using the team [catalog](../Common%20Definitions.md#databricks-terms) and the default [schema](../Common%20Definitions.md#databricks-terms).
 2. Attach a [SQL warehouse](../Common%20Definitions.md#databricks-terms) to the SQL Editor. This example uses the serverless starter warehouse. Reminder, in most cases this is the [compute](../Common%20Definitions.md#databricks-terms) you should be selecting.
 
 It is convenient to select the [catalog](../Common%20Definitions.md#databricks-terms) and [schema](../Common%20Definitions.md#databricks-terms) of the data you will be querying. In the example below, the [catalog](../Common%20Definitions.md#databricks-terms) and [schema](../Common%20Definitions.md#databricks-terms) were changed to `datahub_dev_bronze` and `msx`, respectively. Now in the `FROM` clause, we do not need to specify [catalog](../Common%20Definitions.md#databricks-terms) or [schema](../Common%20Definitions.md#databricks-terms).
 
-<img src="../images/sql editor architecture - workspace change.PNG" alt="Create Git folder dialog" width="1000"> 
+<img src="../images/sql editor architecture - workspace change.PNG" width="1000"> 
 
 ## Notebooks
 
 An example notebook is stored here: [notebook](../Code%20Examples/Notebook%20Example.ipynb)
 
-[Notebooks](../Common%20Definitions.md#databricks-terms) are used for multi-language coding or anything that does not use SQL. Create a [notebook](../Common%20Definitions.md#databricks-terms) from the desired location in the [workspace](../Common%20Definitions.md#databricks-terms) by navigating to that folder and selecting Notebook from the Create dropdown in the top right.
+[Notebooks](../Common%20Definitions.md#databricks-terms) are used for multi-language coding or anything that requires something other than SQL. Create a [notebook](../Common%20Definitions.md#databricks-terms) from the desired location in the [workspace](../Common%20Definitions.md#databricks-terms) by navigating to that folder and selecting Notebook from the Create dropdown in the top right.
 
-<img src="../images/create notebook.PNG" alt="Create Git folder dialog" width="1000">
+<img src="../images/create notebook.PNG" width="1000">
 
-Similarly, we must attach [compute](../Common%20Definitions.md#databricks-terms) to the [notebook](../Common%20Definitions.md#databricks-terms), which will most often be `Serverless`. Here is an example of a simple [notebook](../Common%20Definitions.md#databricks-terms) that uses a SQL chunk and a Python chunk. Notice that the data from the SQL chunk is passed to the Python chunk using `_sqldf`.
+Similarly, we must attach [compute](../Common%20Definitions.md#databricks-terms) to the [notebook](../Common%20Definitions.md#databricks-terms), which will most often be `OAO_DEVELOPMENT Compute`. Here is an example of a simple [notebook](../Common%20Definitions.md#databricks-terms) that uses a SQL chunk and a Python chunk. Notice that the data from the SQL chunk is passed to the Python chunk using `_sqldf`.
 
-<img src="../images/simple notebook.PNG" alt="Create Git folder dialog" width="1000">
+<img src="../images/simple notebook.PNG" width="1000">
 
 ## Sharing Code
 
