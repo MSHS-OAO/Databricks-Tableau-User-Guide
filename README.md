@@ -10,7 +10,12 @@
 2. [Naming Conventions](Databricks/Naming%20Conventions.md)
 3. [Compute - Notebooks and SQL](Databricks/Compute%20-%20Notebooks%20and%20SQL.md)
 4. [Job Scheduling](Databricks/Job%20Scheduling.md)
-5. [Uploading to Databricks](Uploading%20to%20Databricks)
+5. [GitHub Conventions](Databricks/GitHub.md)
+
+## Code Examples
+
+1. [Notebook Example](Code%20Examples/Notebook%20Example.ipynb)
+2. [Query Example](Code%20Examples/Query%20Example.dbquery.ipynb)
 
 ## Tableau
 
@@ -27,11 +32,12 @@
    1. [Connecting to a Datasource](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md)
       1. [Connecting to Databricks](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md#connecting-to-databricks)
       2. [Connecting to Oracle](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md#connecting-to-oracle)
-      3. [Connecting to Sharepoint/Onedrive](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md#sharepointonedrive)
+      3. [Connecting to SharePoint/OneDrive](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md#connecting-to-sharepointonedrive)
    2. [Extract vs. Live Connection](Admin%20Guide/Tableau/Extract%20vs.%20Live%20Connection.md)
    3. [Publishing a Tableau Dataset](Admin%20Guide/Tableau/Publishing%20a%20Tableau%20Dataset.md)
 2. [Compute Creation](Admin%20Guide/Compute%20Creation.md)
-   1. Spark Secrets
-4. Oracle Cloud Wallet (DT)
+3. [DBT](Admin%20Guide/DBT.md)
+4. [Job Notifications](Admin%20Guide/Job%20Notifications.md)
+5. Oracle Cloud Wallet (DT)
    1. Wallet Extraction
    2. DSN Configuration (Schemas)
