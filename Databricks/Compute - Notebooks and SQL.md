@@ -24,7 +24,7 @@ Serverless Starter Warehouse
 OAO_DEVELOPMENT SQL Warehouse
 ```
 
-<u>**Team Guidelines**</u>: When possible, always use a SQL editor to explore/analyse data. Serverless SQL Starter Warehouse will be used for all SQL queries in the SQL editor during data exploration. Notebooks will be used in 3 main scenarios; visualizing data, querying Oracle DB, complex analysis that SQL can't do. For development in notebooks we will primarily use `OAO_DEVELOPMENT Compute`. For production code, the [compute](../Common%20Definitions.md#databricks-terms) choice will be made case by case depending on the needs of the code.
+<u>**Team Guidelines**</u>: When possible, always use a SQL editor to explore/analyze data. Serverless SQL Starter Warehouse will be used for all SQL queries in the SQL editor during data exploration. Notebooks will be used in 3 main scenarios: visualizing data, querying Oracle DB, and complex analysis that SQL can't do. For development in notebooks we will primarily use `OAO_DEVELOPMENT Compute`. For production code, the [compute](../Common%20Definitions.md#databricks-terms) choice will be made case by case depending on the needs of the code.
 
 ## SQL Editor
 
@@ -41,7 +41,7 @@ SQL Editors should be your first option for data analysis. They are best for dat
 
 Now that you have created a SQL query file, there are two things to do before you start writing SQL.
 
-<img src="../images/sql editor architecture.PNG"" width="1000"> 
+<img src="../images/sql editor architecture.PNG" width="1000">
 
 1. Select the [catalog](../Common%20Definitions.md#databricks-terms) and [schema](../Common%20Definitions.md#databricks-terms) you want to work in. This example is using the team [catalog](../Common%20Definitions.md#databricks-terms) and the default [schema](../Common%20Definitions.md#databricks-terms).
 2. Attach a [SQL warehouse](../Common%20Definitions.md#databricks-terms) to the SQL Editor. This example uses the serverless starter warehouse. Reminder, in most cases this is the [compute](../Common%20Definitions.md#databricks-terms) you should be selecting.

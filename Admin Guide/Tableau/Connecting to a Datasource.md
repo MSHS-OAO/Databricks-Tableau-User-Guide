@@ -18,7 +18,7 @@ For our team, a Tableau [datasource](../../Common%20Definitions.md#tableau-terms
 
 <img src="../../images/databricks connector.PNG" width="600">
 
-3. Now log in to Databricks and navigate to the [SQL warehouses](../../Common%20Definitions.md#databricks-terms) under the [compute](../../Common%20Definitions.md#databricks-terms) section. Select `Serverless Starter Warehouse` and navigate to the connection details. (Note no screenshots will be shared for this step to hide secure information). Here you will find the `Server Hostname` and `HTTP Path`. In Tableau, make sure you select `Personal access token` for the Authentication dropdown option. Paste the Tableau personal access token in the token field. Select Sign In.
+3. Now log in to Databricks and navigate to the [SQL warehouses](../../Common%20Definitions.md#databricks-terms) under the [compute](../../Common%20Definitions.md#databricks-terms) section. Select `Serverless Starter Warehouse` and navigate to the connection details. (Note no screenshots will be shared for this step to hide secure information). Here you will find the `Server Hostname` and `HTTP Path`. In Tableau, make sure you select [personal access token](../../Common%20Definitions.md#databricks-terms) for the Authentication dropdown option. Paste the Tableau personal access token in the token field. Select Sign In.
 
 4. Once the connection to Databricks has been made, navigate to the [Catalog](../../Common%20Definitions.md#databricks-terms) dropdown on the left-hand pane and search for `opsanalytics_adb_workspace01`.
 
@@ -54,7 +54,7 @@ For our team, a Tableau [datasource](../../Common%20Definitions.md#tableau-terms
 
 <img src="../../images/oao prod table.PNG" width="500">
 
-6. Please refer to [Extract vs. Live Connection](Extract%20vs.%20Live%20Connection.md) to understand the difference between a [live connection](../../Common%20Definitions.md#tableau-terms) and an [extract](../../Common%20Definitions.md#tableau-terms). Please refer to [Publishing Tableau Dataset](Publishing%20a%20Tableau%20Dataset.md) for how to publish the table and make it available for the team.
+6. Please refer to [Extract vs. Live Connection](Extract%20vs.%20Live%20Connection.md) to understand the difference between a [live connection](../../Common%20Definitions.md#tableau-terms) and an [extract](../../Common%20Definitions.md#tableau-terms). Please refer to [Publishing Tableau Dataset](Publishing%20a%20Tableau%20Dataset.md) for how to publish the [table](../../Common%20Definitions.md#databricks-terms) and make it available for the team.
 
 ### Connecting to SharePoint/OneDrive
 

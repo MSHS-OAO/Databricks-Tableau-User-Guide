@@ -11,10 +11,10 @@ Team admins are responsible for creating shared [compute](../Common%20Definition
 Confirm these details before creating a new [SQL warehouse](../Common%20Definitions.md#databricks-terms) or [all-purpose compute](../Common%20Definitions.md#databricks-terms):
 
 1. Whether the [compute](../Common%20Definitions.md#databricks-terms) supports testing, ad hoc analysis, scheduled production work, or Tableau reporting.
-3. Which users or groups need access.
-4. Whether the workload can use serverless [compute](../Common%20Definitions.md#databricks-terms).
-5. Whether the workflow needs specific libraries, init scripts, secrets, or configuration.
-6. Whether the workflow should use job-specific [compute](../Common%20Definitions.md#databricks-terms) instead of shared [all-purpose compute](../Common%20Definitions.md#databricks-terms).
+2. Which users or groups need access.
+3. Whether the workload can use serverless [compute](../Common%20Definitions.md#databricks-terms).
+4. Whether the workflow needs specific libraries, init scripts, secrets, or configuration.
+5. Whether the workflow should use job-specific [compute](../Common%20Definitions.md#databricks-terms) instead of shared [all-purpose compute](../Common%20Definitions.md#databricks-terms).
 
 Do not create personal all-purpose clusters for shared production [jobs](../Common%20Definitions.md#databricks-terms). Shared production workflows should use job-specific [compute](../Common%20Definitions.md#databricks-terms) when they need isolation or predictable dependency versions.
 
@@ -26,11 +26,11 @@ Use a [SQL warehouse](../Common%20Definitions.md#databricks-terms) for SQL Edito
 
 1. In Databricks, open **SQL Warehouses** from the [compute](../Common%20Definitions.md#databricks-terms) area.
 2. Select **Create SQL warehouse**.
-4. Select a serverless warehouse option when this is sufficient.
-5. Choose a size that matches the expected query demand.
-6. Configure auto stop so the warehouse shuts down when it is idle.
-7. Save the warehouse.
-8. Grant access to the users or groups that need to run SQL or connect Tableau.
+3. Select a serverless warehouse option when this is sufficient.
+4. Choose a size that matches the expected query demand.
+5. Configure auto stop so the warehouse shuts down when it is idle.
+6. Save the warehouse.
+7. Grant access to the users or groups that need to run SQL or connect Tableau.
 
 ### Recommended Setup
 
