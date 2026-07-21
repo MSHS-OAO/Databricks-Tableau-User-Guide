@@ -1,4 +1,4 @@
-# Power Automate — SharePoint to Databricks
+# Power Automate - SharePoint to Databricks
 [Back to Table of Contents](../../README.md#table-of-contents)
 
 
