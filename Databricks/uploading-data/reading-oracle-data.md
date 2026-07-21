@@ -2,7 +2,7 @@
 
 This guide covers how to connect a DatabricksNotebook to an Oracle database and read data into a Spark DataFrame.
 
-**Compute**: Use Serverless Compute for exploratory reads. For scheduled ingestion jobs, attach a job-specific cluster with the Oracle JDBC JAR configured as a cluster library so dependency versions are fixed.
+**Compute**: Use OAO_DEVELOPMENT Compute or OAO_PRODUCTION Compute
 
 ## Prerequisites
 
@@ -10,12 +10,6 @@ This guide covers how to connect a DatabricksNotebook to an Oracle database and 
 - [DSN](../../Common%20Definitions.md#dsn-data-source-name) configured via ODBC Data Source Administrator (see [DSN Configuration](../../Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md))
 - `cx_Oracle` or `oracledb` Python library available on the cluster
 
-### Install the library
-
-```python
-%pip install oracledb
-dbutils.library.restartPython()
-```
 
 ### Connect and query
 
