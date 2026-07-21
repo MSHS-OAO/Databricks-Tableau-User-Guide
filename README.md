@@ -40,8 +40,8 @@
       2. [DSN Configuration](Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md)
       3. [Oracle Connection File](Admin%20Guide/oracle-cloud-wallet/db-config.py)
    6.  Power Automate to Databricks
-      1.  [Getting Outlook Files to Databricks](Admin%20Guide/Power%20Automate/power-automate-outlook.md)
-      2. [Getting Sharepoint Files to Databricks](Admin%20Guide/Power%20Automate/power-automate-sharepoint.md)
+         1. [Getting Outlook Files to Databricks](Admin%20Guide/Power%20Automate/power-automate-outlook.md)
+         2. [Getting Sharepoint Files to Databricks](Admin%20Guide/Power%20Automate/power-automate-sharepoint.md)
 
 2. Tableau
    1. [Connecting to a Datasource](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md)
