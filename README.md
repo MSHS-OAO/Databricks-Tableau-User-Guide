@@ -44,3 +44,4 @@
 3. Oracle Cloud Wallet
    1. [Wallet Extraction](Admin%20Guide/oracle-cloud-wallet/wallet-extraction.md)
    2. [DSN Configuration](Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md)
+   3. [Oracle Connection File](Admin%20Guide/oracle-cloud-wallet/db-config.py)
