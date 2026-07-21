@@ -16,6 +16,8 @@
 
 1. [Notebook Example](Code%20Examples/Notebook%20Example.ipynb)
 2. [Query Example](Code%20Examples/Query%20Example.dbquery.ipynb)
+3. [Reading Data from Oracle DB](Code%20Examples/reading-oracle-data.md)
+
 
 ## Tableau
 
