@@ -32,6 +32,8 @@
    1. [Compute Creation](Admin%20Guide/Databricks/Compute%20Creation.md)
    2. [DBT](Admin%20Guide/Databricks/DBT.md)
    3. [Job Notifications](Admin%20Guide/Databricks/Job%20Notifications.md)
+   4. [Secrets Management](Admin%20Guide/Databricks/secrets_managment.md)
+
 2. Tableau
    1. [Connecting to a Datasource](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md)
       1. [Connecting to Databricks](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md#connecting-to-databricks)
