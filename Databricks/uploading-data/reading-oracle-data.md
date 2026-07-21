@@ -108,5 +108,5 @@ __Output :__
 | `ClassNotFoundException: oracle.jdbc.OracleDriver` | JDBC jar not on cluster | Attach Oracle JDBC JAR to the cluster library |
 
 ## Notes:
-- [`db_config`](../Admin%20Guide/oracle-cloud-wallet/db_config.py) is python function specific to our team
+- [`db_config`](../../Admin%20Guide/oracle-cloud-wallet/db_config.py) is python function specific to our team
 - It facilitates connections to both `OAO_PRODUCTION` and `OAO_DEVELOPMENT`
