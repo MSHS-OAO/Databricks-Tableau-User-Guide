@@ -41,6 +41,6 @@
       3. [Connecting to SharePoint/OneDrive](Admin%20Guide/Tableau/Connecting%20to%20a%20Datasource.md#connecting-to-sharepointonedrive)
    2. [Extract vs. Live Connection](Admin%20Guide/Tableau/Extract%20vs.%20Live%20Connection.md)
    3. [Publishing a Tableau Dataset](Admin%20Guide/Tableau/Publishing%20a%20Tableau%20Dataset.md)
-3. Oracle Cloud Wallet (DT)
-   1. Wallet Extraction
-   2. DSN Configuration (Schemas)
+3. Oracle Cloud Wallet
+   1. [Wallet Extraction](Admin%20Guide/oracle-cloud-wallet/wallet-extraction.md)
+   2. [DSN Configuration](Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md)
