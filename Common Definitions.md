@@ -85,13 +85,13 @@ Expressions transform values:
 Always enter expressions via the **fx** button in the action panel. Typing them as plain text sends the literal string instead of evaluating it.
 ![FX](./images/fx.PNG)
 
-## Testing a Flow
+### Testing a Flow
 
 Use **Test** (top right of the flow editor) to run the flow manually and inspect each step's inputs and outputs. If an action fails, expand it to see the raw HTTP response — the `message` field usually explains exactly what went wrong.
 
 ![FX](./images/testpa.PNG)
 
-## Common Errors
+### Common Errors
 
 | Error | Likely cause |
 |---|---|
