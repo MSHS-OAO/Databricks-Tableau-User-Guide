@@ -1,4 +1,6 @@
 # Power Automate — SharePoint to Databricks
+[Back to Table of Contents](../../README.md#table-of-contents)
+
 
 End-to-end event-driven pipeline that uploads SharePoint files to a Databricks Catalog Volume.
 
