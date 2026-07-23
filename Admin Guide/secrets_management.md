@@ -131,5 +131,5 @@ For production jobs, grant `READ` to the service principal that runs the job —
 |---|---|---|
 | `RESOURCE_DOES_NOT_EXIST: Secret scope 'x' does not exist` | Scope not created, or typo | `databricks secrets list-scopes` to verify the name |
 | `PERMISSION_DENIED` on `secrets.get` | Caller lacks `READ` on the scope | Grant `READ` via `put-acl` to the user or service principal |
-| Value prints as `[REDACTED]` | Expected — redaction is working | Not an error; use the value in code, don't print it |
+| Value prints as `[REDACTED]` | Expected - redaction is working | Not an error; use the value in code, don't print it |
 | `dbutils is not defined` in `db_config.py` | `dbutils` only exists in a notebook | Read the secret in the notebook and pass it into the function |
