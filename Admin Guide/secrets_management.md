@@ -113,7 +113,7 @@ for acl in w.secrets.list_acls(scope="oao_secrets"):
     print(f"{acl.principal}: {acl.permission}")
 ```
 
-For production jobs, grant `READ` to the service principal that runs the job — not to individual users. See [Job Scheduling](#) for the service-principal convention.
+For production jobs, grant `READ` to the service principal that runs the job — not to individual users. See [Job Scheduling](../../Common%20Definitions.md#Databricks Terms) for the service-principal convention.
 
 ## Best Practices
 
