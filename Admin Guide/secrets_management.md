@@ -1,5 +1,5 @@
 # Databricks Secret Management
-[Back to Table of Contents](../../README.md#table-of-contents)
+[Back to Table of Contents](../README.md#table-of-contents)
 
 Credentials - database passwords, API tokens, wallet passwords - must never be hardcoded in a notebook or committed to GitHub. Databricks Secrets store these values encrypted and expose them to code at runtime without ever printing them in plain text.
 
