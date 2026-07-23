@@ -12,8 +12,7 @@ Credentials - database passwords, API tokens, wallet passwords - must never be h
 | Hardcoded string in notebook | Visible to anyone with read access; leaks into GitHub on commit |
 | Databricks Secrets | Encrypted at rest, access-controlled per scope, auto-redacted from notebook output |
 
-Our current `db_config.py` reads Oracle credentials from `os.environ.get(...)`. The [Migrating db_config.py](#migrating-db_configpy-to-secrets) section below shows how to move it to Secrets.
-
+Our current `db_config.py` reads Oracle credentials from `os.environ.get(...)`.
 ## Concepts
 
 - **Secret scope** - a named container for a group of secrets (e.g., `oracle`, `sharepoint`)
