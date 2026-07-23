@@ -11,6 +11,7 @@
 3. [Compute - Notebooks and SQL](Databricks/Compute%20-%20Notebooks%20and%20SQL.md)
 4. [Job Scheduling](Databricks/Job%20Scheduling.md)
 5. [GitHub Conventions](Databricks/GitHub.md)
+6. [Power Automate Flows](Databricks/Power%20Automate%20Flows.md)
 
 ## Code Examples
 
