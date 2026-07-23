@@ -16,11 +16,11 @@ Our current `db_config.py` reads Oracle credentials from `os.environ.get(...)`. 
 
 ## Concepts
 
-- **Secret scope** — a named container for a group of secrets (e.g., `oracle`, `sharepoint`)
-- **Secret** — a single key-value pair inside a scope (e.g., key `password_prod`)
-- **Backend** — where the scope is stored:
-  - **Databricks-backed** — stored in the Databricks control plane. Simplest option.
-  - **Azure Key Vault-backed** — the scope maps to an Azure Key Vault. Use when the org already manages secrets centrally in Key Vault.
+- **Secret scope** - a named container for a group of secrets (e.g., `oracle`, `sharepoint`)
+- **Secret** - a single key-value pair inside a scope (e.g., key `password_prod`)
+- **Backend** - where the scope is stored:
+  - **Databricks-backed** - stored in the Databricks control plane. Simplest option.
+  - **Azure Key Vault-backed** - the scope maps to an Azure Key Vault. Use when the org already manages secrets centrally in Key Vault.
 
 ## Creating Secrets
 
