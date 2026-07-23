@@ -118,12 +118,12 @@ For production jobs, grant `READ` to the service principal that runs the job —
 
 ## Best Practices
 
-- One scope per system or data domain (`oracle`, `sharepoint`, `azure_storage`) — not one giant scope
+- One scope per system or data domain (`oracle`, `sharepoint`, `azure_storage`) - not one giant scope
 - Name keys by environment and role: `username_prod`, `password_dev`, `wallet_password`
 - Never `print()`, log, or write a secret to a table, file, or external request
-- Rotate secrets when a team member leaves or a token is suspected compromised — `put-secret` with the same key overwrites the old value
+- Rotate secrets when a team member leaves or a token is suspected compromised - `put-secret` with the same key overwrites the old value
 - Prefer a service principal (not a personal PAT) for the token behind production secret reads
-- Store the Oracle wallet in a Volume, and its wallet password as a secret — never commit the wallet or its password
+- Store the Oracle wallet in a Volume, and its wallet password as a secret - never commit the wallet or its password
 
 ## Common Errors
 
