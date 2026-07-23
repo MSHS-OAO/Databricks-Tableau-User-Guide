@@ -1,5 +1,7 @@
 
-### Flow Structure
+## Power Automate Flows
+
+[Back to Table of Contents](../README.md#table-of-contents)
 
 Every flow has three parts:
 
