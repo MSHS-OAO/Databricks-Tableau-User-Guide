@@ -1,4 +1,4 @@
-# Oracle Cloud Wallet — Extraction
+# Oracle Cloud Wallet - Extraction
 [Back to Table of Contents](../../README.md#table-of-contents)
 
 The [Oracle Cloud Wallet](../../Common%20Definitions.md#oracle-cloud-wallet) is a ZIP archive that contains the SSL certificates, connection descriptors, and credential files needed to establish a secure mTLS connection from any client (Databricks, ODBC, JDBC) to an Oracle Autonomous Database.
