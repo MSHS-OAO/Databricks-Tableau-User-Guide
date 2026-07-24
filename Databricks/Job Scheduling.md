@@ -4,7 +4,7 @@
 
 Creating a [job](../Common%20Definitions.md#databricks-terms) is the final step in the process of creating an ETL and is only done after the individual [notebooks](../Common%20Definitions.md#databricks-terms) and [dbt models](../Common%20Definitions.md#dbt-terms) have been developed. See [Notebooks](../Databricks/Compute%20-%20Notebooks%20and%20SQL.md) and [DBT](../Admin%20Guide/Databricks/DBT.md) for reference.
 
-<u>**Team Guidelines**</u>: All projects should rely on a single ETL [job](../Common%20Definitions.md#databricks-terms) responsible for all data transformations. To clarify, these will use the standard Job scheduling, not the ETL pipeline. In unique circumstances, ad hoc [jobs](../Common%20Definitions.md#databricks-terms) will be scheduled for automated reporting, and in this case reach out to admins for guidance.
+<u>**Team Guidelines**</u>: All projects should rely on a staging and production ETL [job](../Common%20Definitions.md#databricks-terms). The staging job will populate data in the staging [schema](../Common%20Definitions.md#databricks-terms) and production job will populate data in the production [schema](../Common%20Definitions.md#databricks-terms). To clarify, these will use the standard Job scheduling, not the ETL pipeline. In unique circumstances, ad hoc [jobs](../Common%20Definitions.md#databricks-terms) will be scheduled for automated reporting, and in this case reach out to admins for guidance.
 
 ## Workflow
 
