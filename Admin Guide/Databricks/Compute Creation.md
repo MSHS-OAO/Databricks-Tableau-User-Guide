@@ -2,9 +2,9 @@
 
 [Back to Table of Contents](../README.md#table-of-contents)
 
-This guide is for admins creating Databricks [compute](../Common%20Definitions.md#databricks-terms) for team use. The related user-facing guide is [Compute - Notebooks and SQL](../Databricks/Compute%20-%20Notebooks%20and%20SQL.md).
+This guide is for admins creating Databricks [compute](../../Common%20Definitions.md#databricks-terms) for team use. The related user-facing guide is [Compute - Notebooks and SQL](../Databricks/Compute%20-%20Notebooks%20and%20SQL.md).
 
-Team admins are responsible for creating shared [compute](../Common%20Definitions.md#databricks-terms), applying the right permissions, and confirming the [compute](../Common%20Definitions.md#databricks-terms) type matches the workflow. Use serverless options first for testing and for production workloads when serverless is sufficient. Use job-specific [compute](../Common%20Definitions.md#databricks-terms) for production [notebook](../Common%20Definitions.md#databricks-terms) workflows that need predictable configuration, isolation, or scheduled reliability.
+Team admins are responsible for creating shared [compute](../Common%20Definitions.md#databricks-terms), applying the right permissions, and confirming the [compute](../Common%20Definitions.md#databricks-terms) type matches the workflow. Use serverless SQL Warehouse for all SQL Editors unless otherwise needed. Use `OAO_DEVELOPMENT Compute` for all adhoc development/analysis. Use job-specific [compute](../Common%20Definitions.md#databricks-terms) for production [notebook](../Common%20Definitions.md#databricks-terms) tied to active jobs that need predictable configuration, isolation, or scheduled reliability.
 
 ## Before Creating Compute
 
