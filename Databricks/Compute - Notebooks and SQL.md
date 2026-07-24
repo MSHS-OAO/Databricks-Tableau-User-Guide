@@ -37,11 +37,11 @@ SQL Editors should be your first option for data analysis. They are best for dat
 
 2. The second option, if you know where you want the SQL file to exist in the workspace, is to navigate to that location and create a SQL file from that location.
 
-<img src="../images/sql editor folder.PNG" width="1000"> 
+<img src="../images/sql editor folder.PNG" height="1000"> 
 
 Now that you have created a SQL query file, there are two things to do before you start writing SQL.
 
-<img src="../images/sql editor architecture.PNG" width="1000">
+<img src="../images/sql editor architecture.PNG" height="1000">
 
 1. Select the [catalog](../Common%20Definitions.md#databricks-terms) and [schema](../Common%20Definitions.md#databricks-terms) you want to work in. This example is using the team [catalog](../Common%20Definitions.md#databricks-terms) and the default [schema](../Common%20Definitions.md#databricks-terms).
 2. Attach a [SQL warehouse](../Common%20Definitions.md#databricks-terms) to the SQL Editor. This example uses the serverless starter warehouse. Reminder, in most cases this is the [compute](../Common%20Definitions.md#databricks-terms) you should be selecting.
