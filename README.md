@@ -35,7 +35,7 @@
    1. [Compute Creation](Admin%20Guide/Databricks/Compute%20Creation.md)
    2. [DBT](Admin%20Guide/Databricks/DBT.md)
    3. [Job Notifications](Admin%20Guide/Databricks/Job%20Notifications.md)
-   4. [Secrets Management](Admin%20Guide/Databricks/secrets_managment.md)
+   4. [Secrets Management](Admin%20Guide/Databricks/Secrets%20Management.md)
    5. Oracle Cloud Wallet
       1. [Wallet Extraction](Admin%20Guide/oracle-cloud-wallet/wallet-extraction.md)
       2. [DSN Configuration](Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md)
