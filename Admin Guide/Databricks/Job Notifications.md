@@ -5,7 +5,7 @@
 Job notifications are an easy way for us to monitor [job](../Common%20Definitions.md#databricks-terms) runs from outside of Databricks. Using Teams, we can set alerts so that project teams can monitor their ETL runs automatically.
 
 ## Setting Up Teams Webhook
-<u>**Team Guidelines**</u>: One channel and [webhook](../Common%20Definitions.md#databricks-terms) will be created for all staging and production [notebooks](../Common%20Definitions.md#databricks-terms).
+<u>**Team Guidelines**</u>: One channel and [webhook](../Common%20Definitions.md#databricks-terms) will be created for each project and all staging and production [notebooks](../Common%20Definitions.md#databricks-terms) jobs will alert this one channel.
 
 1. First the project will need a channel in the Databricks Job Log Team.
 2. Select the 3 dots next to the channel name and select workflows.
