@@ -18,8 +18,7 @@ Our current `db_config.py` reads Oracle credentials from `os.environ.get(...)`.
 - **Secret scope** - a named container for a group of secrets (e.g., `oracle`, `sharepoint`)
 - **Secret** - a single key-value pair inside a scope (e.g., key `password_prod`)
 - **Backend** - where the scope is stored:
-  - **Databricks-backed** - stored in the Databricks control plane. Simplest option.
-  - **Azure Key Vault-backed** - the scope maps to an Azure Key Vault. Use when the org already manages secrets centrally in Key Vault.
+  - **Databricks-backed** - stored in the Databricks control plane.
 
 ## Creating Secrets
 
@@ -87,7 +86,7 @@ Scopes have permissions so only the right people and jobs can read a secret.
 Grant read access to a group:
 
 ```python
-rom databricks.sdk.service.workspace import AclPermission
+from databricks.sdk.service.workspace import AclPermission
 
 # Grant READ access (can retrieve secrets, cannot modify)
 w.secrets.put_acl(scope="oao_secrets", principal="gregory.lenane@mssm.edu", permission=AclPermission.READ)
