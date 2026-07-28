@@ -9,8 +9,8 @@
 1. [Architecture](Databricks/Architecture.md)
 2. [Naming Conventions](Databricks/Naming%20Conventions.md)
 3. [Compute - Notebooks and SQL](Databricks/Compute%20-%20Notebooks%20and%20SQL.md)
-4. [Job Scheduling](Databricks/Job%20Scheduling.md)
-5. [GitHub Conventions](Databricks/GitHub.md)
+4. [GitHub Conventions](Databricks/GitHub.md)
+5. [Job Scheduling](Databricks/Job%20Scheduling.md)
 6. [Power Automate Flows](Databricks/Power%20Automate%20Flows.md)
 
 ## Code Examples
