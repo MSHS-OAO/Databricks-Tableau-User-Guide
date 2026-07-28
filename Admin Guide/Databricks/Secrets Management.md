@@ -6,13 +6,8 @@ Credentials - database passwords, API tokens, wallet passwords - must never be h
 **Compute**: Works on all compute types (Serverless, job clusters, all-purpose). No special setup required beyond the Databricks CLI for creating secrets.
 
 ## Why Not Environment Variables or Hardcoding
+Hardcoded string in enviroment/notebook is visible to anyone with read access and leaks into GitHub on commit that is the problem  **Databricks Secrets**  solves, It encrypts, access-controls per scope (Staging vs Production) and auto-redacts from notebook output.
 
-| Approach | Problem |
-|---|---|
-| Hardcoded string in notebook | Visible to anyone with read access; leaks into GitHub on commit |
-| Databricks Secrets | Encrypted at rest, access-controlled per scope, auto-redacted from notebook output |
-
-Our current `db_config.py` reads Oracle credentials from `os.environ.get(...)`.
 ## Concepts
 
 - **Secret scope** - a named container for a group of secrets (e.g., `oracle`, `sharepoint`)
