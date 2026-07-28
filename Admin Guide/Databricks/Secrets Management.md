@@ -6,7 +6,7 @@ Credentials - database passwords, API tokens, wallet passwords - must never be h
 **Compute**: Works on all compute types (Serverless, job clusters, all-purpose). No special setup required beyond the Databricks CLI for creating secrets.
 
 ## Why Not Environment Variables or Hardcoding
-Hardcoded string in enviroment/notebook is visible to anyone with read access and leaks into GitHub on commit that is the problem  **Databricks Secrets**  solves, It encrypts, access-controls per scope (Staging vs Production) and auto-redacts from notebook output.
+Hardcoded string in enviroment/notebook is visible to anyone with read access and leaks into GitHub on commit. **Databricks Secrets**  solves the by encrypting and allowing access-controls per scope (Staging vs Production) along with auto-redacts from notebook output.
 
 ## Concepts
 
