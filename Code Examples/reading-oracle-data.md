@@ -1,5 +1,5 @@
 # Reading Oracle Data in Databricks
-[Back to Table of Contents](../README.md#table-of-contents)
+[Back to Table of Contents](../../README.md#table-of-contents)
 
 
 This guide covers how to connect a DatabricksNotebook to an Oracle database and read data into a Spark DataFrame.
