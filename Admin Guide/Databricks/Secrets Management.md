@@ -1,5 +1,5 @@
 # Databricks Secret Management
-[Back to Table of Contents](../README.md#table-of-contents)
+[Back to Table of Contents](../../README.md#table-of-contents)
 
 Credentials - database passwords, API tokens, wallet passwords - must never be hardcoded in a notebook or committed to GitHub. Databricks Secrets store these values encrypted and expose them to code at runtime without ever printing them in plain text.
 
@@ -107,7 +107,7 @@ for acl in w.secrets.list_acls(scope="oao_secrets"):
     print(f"{acl.principal}: {acl.permission}")
 ```
 
-For production jobs, grant `READ` to the service principal that runs the job — not to individual users. See [Job Scheduling](../Common%20Definitions.md) for the service-principal convention.
+For production jobs, grant `READ` to the service principal that runs the job — not to individual users. See [Job Scheduling](../../Common%20Definitions.md) for the service-principal convention.
 
 ## Best Practices
 
