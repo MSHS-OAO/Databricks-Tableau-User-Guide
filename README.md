@@ -39,7 +39,7 @@
    5. Oracle Cloud Wallet
       1. [Wallet Extraction](Admin%20Guide/oracle-cloud-wallet/wallet-extraction.md)
       2. [DSN Configuration](Admin%20Guide/oracle-cloud-wallet/dsn-configuration.md)
-      3. [Oracle Connection File](Admin%20Guide/oracle-cloud-wallet/db-config.py)
+      3. [Oracle Connection File](Admin%20Guide/oracle-cloud-wallet/db_config.py)
    6.  Power Automate to Databricks
          1. [Getting Outlook Files to Databricks](Admin%20Guide/Power%20Automate/power-automate-outlook.md)
          2. [Getting Sharepoint Files to Databricks](Admin%20Guide/Power%20Automate/power-automate-sharepoint.md)
